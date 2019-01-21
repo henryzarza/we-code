@@ -104,6 +104,7 @@ html.js,
 
 .page {
 	position: relative;
+	padding: 6em 5em 2em;
 	z-index: 1;
 	overflow: hidden;
 	width: 100%;
@@ -126,9 +127,8 @@ html.js,
 	opacity: 0;
 }
 
-/* page content */
 .info {
-	font-size: 1.25em;
+	font-size: 1em;
 	max-width: 50%;
 	margin-top: 1.5em;
 }
@@ -201,6 +201,10 @@ html.js,
 		max-width: 100%;
 	}
 
+	.page {
+		padding: 4em 3em 1em;
+	}
+
 	.pages-nav__item {
 		width: 50%;
 		min-height: 20px;
@@ -218,18 +222,22 @@ html.js,
 }
 
 @media screen and (max-width: 40em) {
-	.js .pages-nav {
+	.pages-nav {
 		display: block;
 		padding: 10px 20px 0 20px;
 		text-align: left;
 	}
 
-	.js .pages-nav__item {
+	.page {
+		padding: 1em;
+	}
+
+	.pages-nav__item {
 		width: 100%;
 		padding: 4px 0;
 	}
 
-	.js .pages-nav__item--small {
+	.pages-nav__item--small {
 		display: inline-block;
 		width: auto;
 		margin-right: 5px;
