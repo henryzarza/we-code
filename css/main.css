@@ -1,6 +1,4 @@
-*,
-*:after,
-*:before {
+*, *:after, *:before {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
@@ -16,16 +14,16 @@
 }
 
 body {
-	font-family: 'Montserrat', sans-serif;
-	color: var(--black);
 	background-color: var(--white);
+	color: var(--black);
+	font-family: 'Montserrat', sans-serif;
 }
 
 a {
-	text-decoration: none;
 	color: var(--blue);
-	outline: none;
 	font-weight: bold;
+	outline: none;
+	text-decoration: none;
 }
 
 a:hover {
@@ -33,13 +31,13 @@ a:hover {
 }
 
 .header__title {
+	color: var(--black);
 	font-size: 2.125em;
 	font-weight: 700;
+	letter-spacing: 2px;
 	line-height: 1.3;
 	margin: 0;
-	letter-spacing: 2px;
 	text-transform: uppercase;
-	color: var(--black);
 }
 
 .wolox-logo {
@@ -52,19 +50,31 @@ a:hover {
 }
 
 .page.page-spotlight {
-	background-color: var(--white-blue);
-	background: url(../images/sun.png) no-repeat right top,
-	url(../images/beach-ball.png) no-repeat left bottom,
-	url(../images/dolphin.png) no-repeat 102% bottom,
-	var(--white-blue);
+	background: url(../images/sun.png) no-repeat right top, url(../images/beach-ball.png) no-repeat left bottom, url(../images/dolphin.png) no-repeat 102% bottom, var(--white-blue);
+}
+
+.page.page-mask {
+	background: url(../images/watermelon.png) no-repeat 103% -3%, url(../images/sun-umbrella.png) no-repeat left 100.5%, url(../images/palm.png) no-repeat 100% bottom, var(--white-blue);
+}
+
+.page.page-sticky {
+	background: url(../images/popsicle.png) no-repeat 102% top, url(../images/sand-bucket.png) no-repeat left bottom, url(../images/hawaiian.png) no-repeat right bottom, var(--white-blue);
+}
+
+.page.page-variables {
+	background: url(../images/beach-ball.png) no-repeat 105% -7%, url(../images/sunset.png) no-repeat -2% 101%, url(../images/sand-bucket.png) no-repeat right bottom, var(--white-blue);
+}
+
+.page.page-blend {
+	background: url(../images/hawaiian.png) no-repeat 102% top, url(../images/palm.png) no-repeat left bottom, url(../images/watermelon.png) no-repeat 101% 103%, var(--white-blue);
 }
 
 .content {
+	display: flex;
 	font-size: 1.1em;
+	height: calc(100vh - 14.5em);
 	margin-top: 1.5em;
 	overflow-y: auto;
-	display: flex;
-	height: calc(100vh - 14.5em);
 }
 
 .documentation {
@@ -77,8 +87,8 @@ a:hover {
 }
 
 .img-test {
-	width: 100%;
 	margin-bottom: 1em;
+	width: 100%;
 }
 
 @media screen and (max-width: 60em) {
@@ -91,11 +101,9 @@ a:hover {
 	.header {
 		padding: 30px 0 0;
 	}
-
 	.header__title {
 		font-size: 1.8em;
 	}
-
 	.content {
 		font-size: 0.85em;
 		height: calc(100vh - 16em);
