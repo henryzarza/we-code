@@ -57,80 +57,83 @@
       <header class="header">
         <h1 class="header__title">Spotlight Effect</h1>
         <p class="info">
-          "We cannot have peace among men whose hearts find delight in killing any living creature." &mdash; Rachel
-          Carson
+          "Uso de la función de CSS <strong>radial-gradient</strong> y de JavaScript para dar interactividad."
+          &mdash; Henry Zarza
         </p>
       </header>
       <div class="content">
         <div class="documentation">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque mollitia temporibus delectus? Praesentium
-          temporibus cumque, cum, maiores officia odit magnam quia nostrum iusto illum labore tempore vitae eaque nulla
-          ad.
-          Cum, ratione. Sunt <a href="#">documentation</a> explicabo voluptates quod sint delectus nesciunt aut earum
-          deserunt. Accusantium obcaecati ullam quos eaque beatae suscipit fugiat et, iusto praesentium saepe vel
-          libero
-          harum aliquid voluptate recusandae.
-          Libero quae vero dolore aliquam! Architecto, corporis. Itaque repellat neque veritatis non odit ea
-          dignissimos
-          suscipit soluta perspiciatis quidem id officia illo tempore deleniti alias repudiandae ratione, ipsum ad!
-          Vel!
-          Amet nam consectetur molestiae facere provident ratione perspiciatis, aut doloribus est architecto
-          dignissimos
-          odit praesentium dolor quo nisi rerum, eveniet minima fugit minus numquam explicabo odio id deserunt? Modi,
-          ullam.
-          Reprehenderit non optio libero molestias tempora nemo error laborum obcaecati ducimus! Veniam, veritatis
-          dolore
-          explicabo laborum enim nostrum numquam pariatur ut voluptatem velit est, repudiandae praesentium animi? Sint,
-          eius
-          molestiae!
-          Enim impedit quo velit esse accusamus excepturi porro vero a. Impedit illum, perferendis possimus tempore
-          minima
-          autem fuga nihil, quae dolorem excepturi sequi animi itaque, a cumque. Minima, corporis eum.
-          Qui cumque aliquid excepturi aliquam necessitatibus quos, vitae voluptate ex est eos veniam ea ut saepe.
-          Enim,
-          vero labore aperiam nisi delectus necessitatibus et, nam numquam dolorum non reprehenderit reiciendis!
-          Aliquam dolor dolorem consectetur ipsa harum commodi aspernatur numquam incidunt, delectus officiis minima
-          nam
-          quaerat maxime atque, a, deserunt earum eveniet? Assumenda magni incidunt quo ab! Hic nisi assumenda
-          incidunt.
-          Animi totam architecto a provident deleniti dicta similique delectus, perspiciatis voluptatem harum ea ipsum
-          nihil
-          dolorum ex necessitatibus inventore rerum magnam error unde amet saepe incidunt vel. Deserunt, vero fugit.
-          Neque necessitatibus inventore ipsa eum? Esse suscipit voluptates quo magni, dignissimos pariatur deleniti a
-          ad,
-          earum, iste dolorum vitae eum illo eaque reprehenderit quibusdam vero delectus? Nam, nostrum consequuntur!
-          Voluptate!
-          Non minus asperiores aut quos quam dignissimos necessitatibus libero obcaecati, eius sequi consequuntur a
-          repellat
-          placeat earum porro! Optio voluptates enim aspernatur nulla dolores, quisquam officiis placeat
-          exercitationem.
-          Pariatur, recusandae?
-          Aliquam officiis, illum eos animi reiciendis, recusandae nostrum maiores quas nobis ab debitis accusamus
-          praesentium ipsam. Labore dolores mollitia, est neque suscipit laboriosam quas aliquam quia dolorum
-          consequuntur
-          saepe! Eius!
-          Quisquam voluptate eligendi rerum! Autem, ipsam eos temporibus incidunt culpa optio ullam debitis aspernatur
-          alias
-          consectetur dolore quo, ipsa ex perspiciatis ut, reiciendis placeat. Consectetur iusto optio quisquam quaerat
-          enim.
-          Provident, dolores repudiandae magni corporis amet blanditiis aut inventore minus ipsam optio doloremque
-          repellat
-          atque repellendus vitae perferendis libero. Tenetur obcaecati dolorem expedita, natus deleniti enim quam
-          ipsum
-          error perferendis!
-          Facilis cumque placeat dolorum maiores minima consequuntur repudiandae saepe laborum exercitationem, at
-          ducimus
-          unde quidem quis! Enim incidunt mollitia, iure numquam, odit reprehenderit accusantium, omnis et fugit
-          inventore
-          cumque id.
-          <a href="#">documentation</a>
+          En este ejercicio vimos el uso de la función radial gradient de CSS para hacer un efecto de lupa junto con
+          un poco de JavaScript vanilla.
+          La función <code>radial-gradient()</code> crea una imagen consistente de una transición progresiva entre dos
+          o
+          más colores
+          que se le envíen, puede recibir únicamente dos formas geométricas un círculo o una elipse. Y hasta el momento
+          solamente se puede usar con la propiedad <code>background-image o background</code>. Por ejemplo: <code>background:
+          radial-gradient(red, green);</code> le estamos indicando que queremos que el centro del círculo sea rojo y
+          se vaya
+          propagando hasta el color verde con una difuminación consistente. Una sintaxis más completa para esta
+          propiedad es la siguiente: radial-gradient(circle at center, red 0%, blue 50%, green 100%)
+          En la cual en la primera propiedad le definimos la forma geométrica valida que queremos (circle o ellipse)
+          después le definimos el radio de origen desde el cual queremos empezar a hacer el gradiente (en este caso
+          desde el centro), de ahí lo que hacemos es definir los colores que queremos para nuestro gradiente (podemos
+          definir los que queramos) y el radio hasta el cual queremos que vaya ese color en específico. Para más
+          información de esta propiedad podemos consultar la documentación de <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/radial-gradient"
+            target="blank">Mozilla</a> y este artículo de <a href="https://css-tricks.com/snippets/css/css-radial-gradient/"
+            target="blank">CSS tricks</a>.
+
+          Lo primero que hicimos fue definir en nuestro HTML la estructura básica que necesitábamos, un texto con el
+          contenido Press and hold y un contenedor con la clase spotlight. En nuestro CSS colocamos una imagen de fondo
+          en la etiqueta body y otros estilos para que nos ocupará toda la pantalla, reseteamos los estilos por defecto
+          de los navegadores, al título le dimos otros estilos para centrarlo con respecto a toda la pantalla y a la
+          clase spotlight le indicamos que ocupe todo el espacio de la pantalla y le asignamos <code>background-image:
+          radial-gradient(circle, transparent 9rem, rgba(0, 0, 0, 0.55) 10rem);</code> en la cual le indicamos que la
+          figura que queremos es un círculo, el primer color es transparente hasta un radio de 9rem y el color final es
+          de rgba(0, 0, 0, 0.55) que comienza en 10rem hasta el final. Y finalmente en nuestro JavaScript, tenemos
+          inicialmente la selección del elemento spotlight después añadimos unos escuchadores a la página para los
+          eventos mousemove, mousedown y mouseup, de manera respectiva lo que hacemos en estos eventos es: capturar la
+          posición del mouse y asignarla a la función radial-gradient haciendo uso de unos cálculos para colocarlo de
+          la forma en la que queremos, preguntamos si el evento que se disparó es el click cambiamos el valor del
+          último color de la función radial-gradient para hacerlo más oscuro y por último cambiamos este último color
+          por el valor que tenía inicialmente.
         </div>
         <div class="examples">
-          <img src="./images/codepen.png" alt="Image test" class="img-test">
-          <img src="./images/codepen.png" alt="Image test" class="img-test">
-          <img src="./images/codepen.png" alt="Image test" class="img-test">
-          <img src="./images/codepen.png" alt="Image test" class="img-test">
-          <img src="./images/codepen.png" alt="Image test" class="img-test">
+          <div class="content-example">
+            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result" data-user="HenryZarza"
+              data-slug-hash="XyweON" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;"
+              data-pen-title="We code summer 1">
+              <span>See the Pen <a href="https://codepen.io/HenryZarza/pen/XyweON/">
+                  We code summer 1</a> by Henry Zarza (<a href="https://codepen.io/HenryZarza">@HenryZarza</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+          </div>
+          <div class="content-example">
+            <p class="codepen" data-height="301" data-theme-id="dark" data-default-tab="js,result" data-user="fededirocco"
+              data-slug-hash="REMPyR" data-preview="true" style="height: 301px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;"
+              data-pen-title="Radial gradient CSS">
+              <span>See the Pen <a href="https://codepen.io/fededirocco/pen/REMPyR/">
+                  Radial gradient CSS</a> by Federico Di Rocco (<a href="https://codepen.io/fededirocco">@fededirocco</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+          </div>
+          <div class="content-example">
+            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="SKOLZ"
+              data-slug-hash="qLpQPP" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;"
+              data-pen-title="We code: summer edition - spotlight effect">
+              <span>See the Pen <a href="https://codepen.io/SKOLZ/pen/qLpQPP/">
+                  We code: summer edition - spotlight effect</a> by Gabriel Zanzotti (<a href="https://codepen.io/SKOLZ">@SKOLZ</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+          </div>
+          <div class="content-example">
+            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="ydzu"
+              data-slug-hash="ZVrRmP" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;"
+              data-pen-title="Spotlight">
+              <span>See the Pen <a href="https://codepen.io/ydzu/pen/ZVrRmP/">
+                  Spotlight</a> by ydzu (<a href="https://codepen.io/ydzu">@ydzu</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -241,6 +244,7 @@
   </div>
 
   <button class="menu-button"><span>Menu</span></button>
+  <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
   <script src="js/main.js"></script>
 </body>
 

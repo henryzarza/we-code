@@ -30,6 +30,12 @@ a:hover {
 	color: var(--black);
 }
 
+code {
+	color: var(--gray);
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+}
+
 .header__title {
 	color: var(--black);
 	font-size: 2.125em;
@@ -107,9 +113,8 @@ a:hover {
 	flex: 1;
 }
 
-.img-test {
+.content-example {
 	margin-bottom: 1em;
-	width: 100%;
 }
 
 @media screen and (max-width: 60em) {
