@@ -323,104 +323,194 @@
     <div class="page page-mask" id="page-mask">
       <header class="header">
         <h1 class="header__title">CSS Mask</h1>
-        <p class="header__desc">Based on Ilya Kostin's Dribbble shot <a href="https://dribbble.com/shots/2286042-Stacked-navigation">Stacked
-            navigation</a></p>
         <p class="info">
-          "When you adopt a vegan diet we make a connection, you don't go back, it is not a diet, it is a lifestyle."
-          &mdash; Freelee Frugivore
+          "Uso de la propiedad de CSS <strong>mask</strong> y del evento <strong>scroll</strong> de JavaScript para dar
+          interactividad." &mdash; Henry Zarza
         </p>
       </header>
+      <div class="content">
+        <div class="documentation">
+          En este ejercicio vimos la propiedad <strong>mask</strong> de CSS junto con JavaScript vanilla para hacer una
+          animación con el
+          scroll. Antes de comenzar la explicación del ejercicio es importante dar un poco de contexto de la
+          propiedad <strong>mask</strong>. Esta propiedad es un shorthand para asignar todas las propiedades de
+          enmascaramiento; el proceso de enmascaramiento con esta propiedad consiste en ocultar un elemento (parcial o
+          totalmente) a partir de una imagen con unas especificaciones o puntos que le damos. La sintaxis para utilizar
+          esta propiedad es la siguiente:
+          <code>mask: [mask-reference] || [masking-mode] || [mask-position] || [mask-repeat] || [geometry-box] || [compositing-operator]</code>
+          En donde <strong>mask-reference</strong> hace referencia a la propiedad <a href="https://tympanus.net/codrops/css_reference/mask-image/"
+            target="blank">mask-image</a> en la cual le
+          especificamos la imagen a partir de la cual queremos empezar a hacer el proceso de
+          enmascaramiento, luego vienen las propiedades para asignar el tipo de enmascaramiento que
+          queremos, para esto utilizamos la propiedad <a href="http://tympanus.net/codrops/css_reference/mask-mode"
+            target="blank">mask-mode</a> en la cual especificamos como la
+          imagen que estamos utilizando para la máscara va a hacer tratada, existen dos posibles
+          valores <strong>alpha mask o luminance mask</strong>. Luego viene la posición, el cual corresponde a la
+          propiedad <a href="https://tympanus.net/codrops/css_reference/mask-position/" target="blank">mask-position</a>
+          esta propiedad se comporta de la misma forma en la que se comporta
+          la propiedad <strong>background-position</strong>, es decir, mediante esta propiedad especificamos las
+          coordenadas tanto en X como en Y en la cual queremos que se ubique la imagen que tenemos
+          definida como máscara, la siguiente propiedad corresponde a <a href="https://tympanus.net/codrops/css_reference/mask-size/"
+            target="blank">mask-size</a> en la cual definimos
+          el tamaño de la imagen que estamos colocando como máscara, las siguientes propiedades
+          <a href="https://tympanus.net/codrops/css_reference/mask-repeat/" target="blank">mask-repeat</a> y <a href="https://tympanus.net/codrops/css_reference/mask-origin/"
+            target="blank">mask-origin</a> sirven consecutivamente para definir si queremos que la imagen se
+          repita y el punto de origen en el cual queremos que se ubique la imagen, la siguiente
+          propiedad corresponde a <a href="https://tympanus.net/codrops/css_reference/mask-clip/" target="blank">mask-clip</a>,
+          la cual nos sirve para determinar el área de pintura de
+          la máscara que determina el área de un elemento que se ve afectado por una máscara, el
+          contenido pintado (visible) de un elemento se ve restringido a esta área que definimos y
+          por último la propiedad <a href="https://tympanus.net/codrops/css_reference/mask-composite/" target="blank">mask-composite</a>
+          nos sirve para especificar cómo se compone una
+          imagen que estamos usando como máscara cuando queremos definir varias imágenes como
+          enmascaramiento. Para más información de esta propiedad podemos consultar la documentación
+          de <a href="https://tympanus.net/codrops/css_reference/mask/" target="blank">Codrops</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/mask"
+            target="blank">Mozilla</a> y <a href="https://css-tricks.com/clipping-masking-css/" target="blank">CSS
+            tricks</a>. <br>
+          Y ahora sí, lo que hicimos en este ejercicio fue definir un h1 con la clase title para
+          darle estilos en nuestro CSS, luego definimos un SVG con forma de flecha hacia abajo y con
+          CSS lo que hicimos fue hacer una animación para que la flecha hiciera un efecto de
+          levitación y por último definimos un div con el id cover el cual va a tener la máscara, en
+          nuestro CSS tenemos lo común, es decir, la definición de los estilos de los navegadores, algunas
+          propiedades para el título y la animación del SVG, lo importante acá son las propiedades
+          <strong>mask-image</strong> y <strong>mask-size</strong> en la cual le definimos la url de la imagen con la
+          cual vamos a
+          hacer el enmascaramiento y el tamaño de esa imagen. En nuestro JavaScript tenemos definidos
+          los frames por segundo desde el cual queremos empezar a mover el size de esa máscara, luego
+          obtenemos el elemento cover y las dimensiones de la pantalla, añadimos un escuchador del
+          evento scroll para la ventana y en este hacemos una serie de cálculos para ir cambiando el
+          valor de la propiedad <strong>mask-size</strong> para dar el efecto de movimiento de la máscara.
+        </div>
+        <div class="examples">
+          <div class="content-example">
+            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result" data-user="HenryZarza"
+              data-slug-hash="aQrVEG" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;"
+              data-pen-title="We code summer edition - Mask">
+              <span>See the Pen <a href="https://codepen.io/HenryZarza/pen/aQrVEG/">
+                  We code summer edition - Mask</a> by Henry Zarza (<a href="https://codepen.io/HenryZarza">@HenryZarza</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+          </div>
+          <div class="content-example">
+            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="ydzu"
+              data-slug-hash="KbRWXp" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;"
+              data-pen-title="Hitch - Mask in steps">
+              <span>See the Pen <a href="https://codepen.io/ydzu/pen/KbRWXp/">
+                  Hitch - Mask in steps</a> by ydzu (<a href="https://codepen.io/ydzu">@ydzu</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+          </div>
+          <div class="content-example">
+            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="js,result" data-user="SKOLZ"
+              data-slug-hash="vvjyEM" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;"
+              data-pen-title="We code: summer edition - CSS mask">
+              <span>See the Pen <a href="https://codepen.io/SKOLZ/pen/vvjyEM/">
+                  We code: summer edition - CSS mask</a> by Gabriel Zanzotti (<a href="https://codepen.io/SKOLZ">@SKOLZ</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+          </div>
+          <div class="content-example">
+            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="js,result" data-user="fededirocco"
+              data-slug-hash="LMBodm" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;"
+              data-pen-title="Mask scroll CSS">
+              <span>See the Pen <a href="https://codepen.io/fededirocco/pen/LMBodm/">
+                  Mask scroll CSS</a> by Federico Di Rocco (<a href="https://codepen.io/fededirocco">@fededirocco</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+          </div>
+          <div class="content-example">
+            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="tammaroivan"
+              data-slug-hash="WLyBrb" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;"
+              data-pen-title="SPACE - Video &amp;amp; CSS mask">
+              <span>See the Pen <a href="https://codepen.io/tammaroivan/pen/WLyBrb/">
+                  SPACE - Video &amp; CSS mask</a> by Ivan (<a href="https://codepen.io/tammaroivan">@tammaroivan</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+          </div>
+          <div class="content-example">
+            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="Dorian30"
+              data-slug-hash="rovmaY" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;"
+              data-pen-title="Wolox Mask">
+              <span>See the Pen <a href="https://codepen.io/Dorian30/pen/rovmaY/">
+                  Wolox Mask</a> by Dorian Alvarado (<a href="https://codepen.io/Dorian30">@Dorian30</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="page page-sticky" id="page-sticky">
       <header class="header">
         <h1 class="header__title">Posicionamiento dinámico</h1>
-        <p class="header__desc">Based on Ilya Kostin's Dribbble shot <a href="https://dribbble.com/shots/2286042-Stacked-navigation">Stacked
-            navigation</a></p>
         <p class="info">
-          "I decided to pick the diet that I thought would maximize my chances of long-term survival." &mdash; Al Gore
+          "Uso de la propiedad position: <strong>sticky</strong> para posicionar elementos basado en el scroll
+          del usuario."
+          &mdash; Damian Finkelstein
         </p>
       </header>
     </div>
     <div class="page page-variables" id="page-variables">
       <header class="header">
         <h1 class="header__title">CSS variables y filters</h1>
-        <p class="header__desc">Based on Ilya Kostin's Dribbble shot <a href="https://dribbble.com/shots/2286042-Stacked-navigation">Stacked
-            navigation</a></p>
         <p class="info">
-          "You have to make a conscious decision to change for your own well-being, that of your family and your
-          country."
-          &mdash;Bill Clinton
+          "Uso de la propiedad <strong>filter</strong> y <strong>variables de CSS</strong> junto con JavaScript."
+          &mdash; Henry Zarza
         </p>
       </header>
     </div>
     <div class="page page-blend" id="page-blend">
       <header class="header">
         <h1 class="header__title">Create your blend</h1>
-        <p class="header__desc">Based on Ilya Kostin's Dribbble shot <a href="https://dribbble.com/shots/2286042-Stacked-navigation">Stacked
-            navigation</a></p>
         <p class="info">
-          "The moment I began to understand what was going on with the treatment of animals, it led me more and more in
-          the
-          way of the path I am [on] now, which is a complete vegan." &mdash; Bryan Adams
+          "Mezclar componentes utilizando la propiedad <strong>mix-blend-mode</strong>, analizar los distintos
+          resultados que se pueden lograr y la compatibilidad."
+          &mdash; Francisco Iglesias
         </p>
       </header>
     </div>
     <div class="page page-clip" id="page-clip">
       <header class="header">
-        <h1 class="header__title">Where to buy</h1>
-        <p class="header__desc">Based on Ilya Kostin's Dribbble shot <a href="https://dribbble.com/shots/2286042-Stacked-navigation">Stacked
-            navigation</a></p>
+        <h1 class="header__title">Clip-path</h1>
         <p class="info">
-          "When people ask me why I don't eat meat or any other animal products, I say, 'Because they are unhealthy and
-          they
-          are the product of a violent and inhumane industry.'" &mdash;
+          "Análisis de la propiedad <strong>clip-path</strong> de CSS, mostrando sus distintas opciones y su
+          compatibilidad."
+          &mdash; Gabriel Zanzotti
         </p>
       </header>
     </div>
     <div class="page page-comic" id="page-comic">
       <header class="header">
-        <h1 class="header__title">Blog &amp; News</h1>
-        <p class="header__desc">Based on Ilya Kostin's Dribbble shot <a href="https://dribbble.com/shots/2286042-Stacked-navigation">Stacked
-            navigation</a></p>
+        <h1 class="header__title">Comic con Grid</h1>
         <p class="info">
-          "The question is not, 'Can they reason?' nor, 'Can they talk?' but rather, 'Can they suffer?" &mdash; Jeremy
-          Bentham
+          "<strong>CSS Grid</strong> con la propiedad <strong>clip-path</strong> para hacer un comic genial."
+          &mdash; Henry Zarza
         </p>
       </header>
     </div>
     <div class="page page-animation" id="page-animation">
       <header class="header">
-        <h1 class="header__title">Contact</h1>
-        <p class="header__desc">Based on Ilya Kostin's Dribbble shot <a href="https://dribbble.com/shots/2286042-Stacked-navigation">Stacked
-            navigation</a></p>
+        <h1 class="header__title">Principios de animación</h1>
         <p class="info">
-          "Man is the only animal that can remain on friendly terms with the victims he intends to eat until he eats
-          them."
-          &mdash; Samuel Butler
+          "Uso de la biblioteca <strong>anime.js</strong> para explicar los principios de las animaciones."
+          &mdash; Gabriel Porras
         </p>
       </header>
     </div>
     <div class="page page-mojs" id="page-mojs">
       <header class="header">
-        <h1 class="header__title">MOJS</h1>
-        <p class="header__desc">Based on Ilya Kostin's Dribbble shot <a href="https://dribbble.com/shots/2286042-Stacked-navigation">Stacked
-            navigation</a></p>
+        <h1 class="header__title">Micro interacción con mo.js</h1>
         <p class="info">
-          "Man is the only animal that can remain on friendly terms with the victims he intends to eat until he eats
-          them."
-          &mdash; Samuel Butler
+          "Uso de la biblioteca <strong>mo.js</strong> para hacer una micro interacción como la de Instagram."
+          &mdash; Henry Zarza
         </p>
       </header>
     </div>
     <div class="page page-canvas" id="page-canvas">
       <header class="header">
-        <h1 class="header__title">canvas</h1>
-        <p class="header__desc">Based on Ilya Kostin's Dribbble shot <a href="https://dribbble.com/shots/2286042-Stacked-navigation">Stacked
-            navigation</a></p>
+        <h1 class="header__title">Canvas</h1>
         <p class="info">
-          "Man is the only animal that can remain on friendly terms with the victims he intends to eat until he eats
-          them."
-          &mdash; Samuel Butler
+          "Uso de <strong>canvas</strong> para hacer un tablero en el que se pueda pintar."
+          &mdash; Henry Zarza
         </p>
       </header>
     </div>

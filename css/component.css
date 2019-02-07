@@ -146,13 +146,13 @@ html.js,
 .menu-button::before,
 .menu-button::after,
 .menu-button span {
-  background-color: var(--black);
+  background-color: var(--green);
 }
 
 .menu-button:hover::before,
 .menu-button:hover::after,
 .menu-button:hover span {
-  background-color: var(--gray);
+  background-color: var(--black);
 }
 
 .menu-button::before,
