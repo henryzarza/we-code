@@ -109,6 +109,7 @@
 			page.addEventListener('click', function (ev) {
 				if (isMenuOpen) {
 					ev.preventDefault();
+					addActiveClass(pageid);
 					openPage(pageid);
 				}
 			});
@@ -225,5 +226,22 @@
 	}
 
 	init();
+
+	anime({
+		targets: '.svg-title path',
+		fill: ['rgba(0,0,0,0)', '#FFF'],
+		strokeDashoffset: [anime.setDashoffset, 0],
+		easing: 'easeInOutSine',
+		duration: 400,
+		delay: function (el, i) { return i * 150 }
+	});
+
+	anime({
+		targets: '.header__desc',
+		translateY: 10,
+		scale: [0, 1],
+		delay: 3500,
+		duration: 700
+	});
 
 })(window);

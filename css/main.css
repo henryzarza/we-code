@@ -7,14 +7,13 @@
 :root {
 	--white: #FFF;
 	--gray: #8c8c8c;
-	--white-blue: #fbf9f9;
 	--black: #1d1e21;
 	--green: #B0D351;
 	--blue: #00ADE0;
 }
 
 body {
-	background-color: var(--white);
+	background-color: var(--blue);
 	color: var(--black);
 	font-family: 'Montserrat', sans-serif;
 }
@@ -27,11 +26,10 @@ a {
 }
 
 a:hover {
-	color: var(--black);
+	text-decoration: underline;
 }
 
 code {
-	color: var(--gray);
 	font-family: 'Montserrat', sans-serif;
 	font-weight: bold;
 }
@@ -48,52 +46,62 @@ code {
 
 .wolox-logo {
 	max-width: 100%;
-	width: 12rem;
+	width: 15rem;
+	position: absolute;
+	bottom: 1rem;
+	left: 1rem;
 }
 
 .page.page-home {
-	background: var(--white) url(http://ufc206i.com/images/palm-tree-nature.png) no-repeat right/contain;
+	background: var(--white) url(../images/beach.jpeg) no-repeat center/cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-.page.page-spotlight {
-	background: url(../images/sun.png) no-repeat right top, url(../images/beach-ball.png) no-repeat left bottom, url(../images/dolphin.png) no-repeat 102% bottom, var(--white-blue);
+.page {
+	background-color: var(--white);
+}
+
+/* .page.page-spotlight {
+	background: url(../images/sun.png) no-repeat right top, url(../images/beach-ball.png) no-repeat left bottom, url(../images/dolphin.png) no-repeat 102% bottom, var(--white);
 }
 
 .page.page-mask {
-	background: url(../images/watermelon.png) no-repeat 103% -3%, url(../images/sun-umbrella.png) no-repeat left 100.5%, url(../images/palm.png) no-repeat 100% bottom, var(--white-blue);
+	background: url(../images/watermelon.png) no-repeat 103% -3%, url(../images/sun-umbrella.png) no-repeat left 100.5%, url(../images/palm.png) no-repeat 100% bottom, var(--white);
 }
 
 .page.page-sticky {
-	background: url(../images/popsicle.png) no-repeat 102% top, url(../images/sand-bucket.png) no-repeat left bottom, url(../images/hawaiian.png) no-repeat 102% bottom, var(--white-blue);
+	background: url(../images/popsicle.png) no-repeat 102% top, url(../images/sand-bucket.png) no-repeat left bottom, url(../images/hawaiian.png) no-repeat 102% bottom, var(--white);
 }
 
 .page.page-variables {
-	background: url(../images/dolphin.png) no-repeat 101% -3%, url(../images/palm.png) no-repeat left bottom, url(../images/sand-bucket.png) no-repeat right bottom, var(--white-blue);
+	background: url(../images/dolphin.png) no-repeat 101% -3%, url(../images/palm.png) no-repeat left bottom, url(../images/sand-bucket.png) no-repeat right bottom, var(--white);
 }
 
 .page.page-blend {
-	background: url(../images/beach-ball.png) no-repeat 102% top, url(../images/hawaiian.png) no-repeat left bottom, url(../images/watermelon.png) no-repeat 101% 103%, var(--white-blue);
+	background: url(../images/beach-ball.png) no-repeat 102% top, url(../images/hawaiian.png) no-repeat left bottom, url(../images/watermelon.png) no-repeat 101% 103%, var(--white);
 }
 
 .page.page-clip {
-	background: url(../images/palm.png) no-repeat right top, url(../images/sun.png) no-repeat -6% 103%, url(../images/sun-umbrella.png) no-repeat right 100.5%, var(--white-blue);
+	background: url(../images/palm.png) no-repeat right top, url(../images/sun.png) no-repeat -6% 103%, url(../images/sun-umbrella.png) no-repeat right 100.5%, var(--white);
 }
 
 .page.page-comic {
-	background: url(../images/sand-bucket.png) no-repeat right top, url(../images/watermelon.png) no-repeat left 103%, url(../images/beach-ball.png) no-repeat 101% 107%, var(--white-blue);
+	background: url(../images/sand-bucket.png) no-repeat right top, url(../images/watermelon.png) no-repeat left 103%, url(../images/beach-ball.png) no-repeat 101% 107%, var(--white);
 }
 
 .page.page-animation {
-	background: url(../images/hawaiian.png) no-repeat 102% top, url(../images/dolphin.png) no-repeat left 104%, url(../images/popsicle.png) no-repeat 102% bottom, var(--white-blue);
+	background: url(../images/hawaiian.png) no-repeat 102% top, url(../images/dolphin.png) no-repeat left 104%, url(../images/popsicle.png) no-repeat 102% bottom, var(--white);
 }
 
 .page.page-mojs {
-	background: url(../images/sun-umbrella.png) no-repeat right top, url(../images/sand-bucket.png) no-repeat left bottom, url(../images/sun.png) no-repeat 106% 103%, var(--white-blue);
+	background: url(../images/sun-umbrella.png) no-repeat right top, url(../images/sand-bucket.png) no-repeat left bottom, url(../images/sun.png) no-repeat 106% 103%, var(--white);
 }
 
 .page.page-canvas {
-	background: url(../images/sun.png) no-repeat 103% top, url(../images/palm.png) no-repeat left bottom, url(../images/hawaiian.png) no-repeat 101% bottom, var(--white-blue);
-}
+	background: url(../images/sun.png) no-repeat 103% top, url(../images/palm.png) no-repeat left bottom, url(../images/hawaiian.png) no-repeat 101% bottom, var(--white);
+} */
 
 .content {
 	display: flex;
@@ -115,6 +123,41 @@ code {
 
 .content-example {
 	margin-bottom: 1em;
+}
+
+.svg-title {
+	width: 100%;
+	margin-bottom: 2rem;
+	animation: shadow 1s ease-in-out 4s forwards;
+}
+
+@keyframes shadow {
+	from {
+		filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0));
+		-webkit-filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0));
+	}
+	to {
+		filter: drop-shadow(1px 1px 4px rgba(255, 255, 0, .9));
+		-webkit-filter: drop-shadow(1px 1px 4px rgba(255, 255, 0, .9));
+	}
+}
+
+.svg-title path {
+	stroke: var(--black);
+	stroke-width: 1;
+}
+
+.header__desc {
+	width: 100%;
+	border-radius: .25rem;
+	padding: 1rem;
+	background-color: rgba(0, 0, 0, .5);
+	color: var(--white);
+}
+
+.header--main {
+	max-width: 100%;
+	width: 30rem;
 }
 
 @media screen and (max-width: 60em) {

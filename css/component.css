@@ -53,23 +53,25 @@ html.js,
 }
 
 .link {
-  color: var(--gray);
+  color: var(--white);
   font-size: 0.85em;
   font-weight: bold;
   letter-spacing: 1px;
   position: relative;
   text-transform: uppercase;
+  transition: color 0.2s;
 }
 
 .link:hover,
 .link:focus,
 .link--active {
-  color: var(--blue);
+  color: var(--black);
+  text-decoration: none;
 }
 
 .link:not(.link--faded)::before,
 .link--active::before {
-  background-color: var(--blue);
+  background-color: var(--black);
   content: '';
   height: 2px;
   left: 50%;
@@ -144,13 +146,13 @@ html.js,
 .menu-button::before,
 .menu-button::after,
 .menu-button span {
-  background-color: var(--gray);
+  background-color: var(--black);
 }
 
 .menu-button:hover::before,
 .menu-button:hover::after,
 .menu-button:hover span {
-  background-color: var(--blue);
+  background-color: var(--gray);
 }
 
 .menu-button::before,
