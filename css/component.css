@@ -152,7 +152,7 @@ html.js,
 .menu-button:hover::before,
 .menu-button:hover::after,
 .menu-button:hover span {
-  background-color: var(--black);
+  background-color: var(--gray);
 }
 
 .menu-button::before,
@@ -168,13 +168,25 @@ html.js,
   width: 100%;
 }
 
-.menu-button span {
+.menu-button > span {
   height: 2px;
   left: 0;
   overflow: hidden;
   position: absolute;
   transition: opacity 0.25s;
   width: 100%;
+}
+
+.menu-button__description {
+  color: var(--green);
+  font-weight: bold;
+  position: absolute;
+  right: -40px;
+  top: 6px;
+}
+
+.menu-button:hover .menu-button__description {
+  color: var(--gray);
 }
 
 .menu-button::before {
@@ -185,7 +197,8 @@ html.js,
   transform: translate3d(0, 10px, 0) scale3d(0.8, 1, 1);
 }
 
-.menu-button--open span {
+.menu-button--open span,
+.menu-button--open .menu-button__description {
   opacity: 0;
 }
 
@@ -241,5 +254,8 @@ html.js,
   }
   .info {
     font-size: 0.85em;
+  }
+  .menu-button__description {
+    display: none;
   }
 }
