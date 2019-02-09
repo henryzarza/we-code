@@ -508,6 +508,46 @@
           &mdash; Francisco Iglesias
         </p>
       </header>
+      <div class="content">
+        <div class="documentation">
+          La propiedad CSS <strong>mix-blend-mode</strong> describe cómo el contenido de un elemento
+          se mezclará con el elemento que está tras él. Con esta propiedad puedes mezclar imágenes o
+          textos y se logra un efecto estilo Photoshop con los siguientes valores:
+          <strong>mix-blend-mode: normal|multiply|screen|overlay|darken|lighten|color-dodge|color-burn|difference|exclusion|hue|saturation|color|luminosity;</strong>
+          Los efectos son muy variados y es mejor verlos y compararlos como puedes ver en este
+          ejemplo de <a href="https://codepen.io/team/css-tricks/pen/ZYdjmZ" target="blank">CSS Tricks</a>. <br>
+          Sin embargo, Frank nos mostró un efecto genial y muy práctico con esta propiedad que va
+          más a allá de darle un efecto a una imagen. Se trata de cambiarle el color a un producto.
+          Por ejemplo si tenemos un carro de color rojo con un fondo blanco, podremos cambiar el
+          color del carro a azul, amarillo, verde, etc. No tendríamos que tomarle foto a cada
+          color del producto. Solo necesitamos una foto y nuestra propiedad mix-blend-mode. <br>
+          Lo primero que necesitamos es tener la imagen sobre fondo blanco. Sobre ella colocaremos
+          un <strong>color</strong> y este elemento tendrá el <strong>mix-blend-mode: hue</strong>.
+          Esté hará la magia de cambiar el color de nuestro producto. Si el elemento encima del
+          nuestro carro es de color azul, el carro será azul gracias al valor HUE.
+          Ahora, pensando en el cambio de colores de una manera más dinámica y que nos pueda servir,
+          por ejemplo, para una tienda, vamos a agregar varios colores y mediante Javascript haremos
+          que cuando el usuario haga clic sobre un color dado, el elemento sobrepuesto sobre el carro,
+          cambie su color.
+          Recuerda revisar la <a href="https://caniuse.com/#search=mix-blend-mode" target="blank">compatibilidad</a>.
+        </div>
+        <div class="examples">
+          <div class="content-example">
+            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="FrankIglesias" data-slug-hash="vvbKRr" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="Changing color car">
+              <span>See the Pen <a href="https://codepen.io/FrankIglesias/pen/vvbKRr/">
+              Changing color car</a> by Francisco Iglesias (<a href="https://codepen.io/FrankIglesias">@FrankIglesias</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+          </div>
+          <div class="content-example">
+            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="FrankIglesias" data-slug-hash="gZqLYM" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="Text and background">
+              <span>See the Pen <a href="https://codepen.io/FrankIglesias/pen/gZqLYM/">
+              Text and background</a> by Francisco Iglesias (<a href="https://codepen.io/FrankIglesias">@FrankIglesias</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="page page-clip" id="page-clip">
       <header class="header">
