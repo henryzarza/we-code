@@ -227,20 +227,23 @@
 
 	init();
 
-	anime({
-		targets: '.svg-title path',
-		fill: ['rgba(0,0,0,0)', '#FFF'],
-		strokeDashoffset: [anime.setDashoffset, 0],
-		easing: 'easeInOutSine',
-		duration: 400,
-		delay: function (el, i) { return i * 150 }
-	});
+	setTimeout(() => {
+		anime({
+			targets: '.svg-title path',
+			fill: ['rgba(0,0,0,0)', '#FFF'],
+			strokeDashoffset: [anime.setDashoffset, 0],
+			easing: 'easeInOutSine',
+			duration: 400,
+			delay: function (el, i) { return i * 150 }
+		});
+	
+	}, 1000);
 
 	anime({
 		targets: '.header__desc',
 		translateY: 10,
 		scale: [0, 1],
-		delay: 3500,
+		delay: 4500,
 		duration: 700
 	});
 

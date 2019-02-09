@@ -238,7 +238,7 @@
     </div>
     <div class="page page-spotlight" id="page-spotlight">
       <header class="header">
-        <h1 class="header__title">Spotlight Effect</h1>
+        <h2 class="header__title">Spotlight Effect</h2>
         <p class="info">
           "Uso de la función de CSS <strong>radial-gradient</strong> y de JavaScript para dar interactividad."
           &mdash; Henry Zarza
@@ -322,7 +322,7 @@
     </div>
     <div class="page page-mask" id="page-mask">
       <header class="header">
-        <h1 class="header__title">CSS Mask</h1>
+        <h2 class="header__title">CSS Mask</h2>
         <p class="info">
           "Uso de la propiedad de CSS <strong>mask</strong> y del evento <strong>scroll</strong> de JavaScript para dar
           interactividad." &mdash; Henry Zarza
@@ -367,7 +367,7 @@
           de <a href="https://tympanus.net/codrops/css_reference/mask/" target="blank">Codrops</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/mask"
             target="blank">Mozilla</a> y <a href="https://css-tricks.com/clipping-masking-css/" target="blank">CSS
             tricks</a>. <br>
-          Y ahora sí, lo que hicimos en este ejercicio fue definir un h1 con la clase title para
+          Y ahora sí, lo que hicimos en este ejercicio fue definir un h2 con la clase title para
           darle estilos en nuestro CSS, luego definimos un SVG con forma de flecha hacia abajo y con
           CSS lo que hicimos fue hacer una animación para que la flecha hiciera un efecto de
           levitación y por último definimos un div con el id cover el cual va a tener la máscara, en
@@ -441,7 +441,7 @@
     </div>
     <div class="page page-sticky" id="page-sticky">
       <header class="header">
-        <h1 class="header__title">Posicionamiento dinámico</h1>
+        <h2 class="header__title">Posicionamiento dinámico</h2>
         <p class="info">
           "Uso de la propiedad position: <strong>sticky</strong> para posicionar elementos basado en el scroll
           del usuario."
@@ -451,16 +451,57 @@
     </div>
     <div class="page page-variables" id="page-variables">
       <header class="header">
-        <h1 class="header__title">CSS variables y filters</h1>
+        <h2 class="header__title">CSS variables y filters</h2>
         <p class="info">
           "Uso de la propiedad <strong>filter</strong> y <strong>variables de CSS</strong> junto con JavaScript."
           &mdash; Henry Zarza
         </p>
       </header>
+      <div class="content">
+        <div class="documentation">
+          Las variables en CSS o Custom properties son propiedades definidas que contienen valores específicos
+          que se pueden volver a utilizar en el DOM. Se les conoce como custom properties porque están sujetas
+          a la cascada (su valor puede redefinirse) y heredan su valor de sus padres. Estos dos conceptos
+          (cascada y herencia) son muy propios de las propiedades CSS y no tienen relación con el comportamiento
+          de una variable en un lenguaje de programación. <br>
+          Para definir una variable lo hacemos de esta forma: <strong>elemento { --color: green;  }</strong> para 
+          declararla y  <strong>elemento { background-color: var(--color, red);</strong> para utilizarla,
+          algo importante a mencionar es que no se puede establecer una propiedad para un elemento y esperar
+          recuperarla en la regla del descendiente de un hermano. La propiedad sólo está configurada para el
+          selector de emparejamiento y sus descendientes. El scope de las variables de CSS no tiene scope de
+          bloque sino que, por la herencia, son utilizables en cualquier hijo o descendiente (en el DOM)
+          del elemento en el que fueron declaradas. Es por eso que si queremos que una variable sea global
+          (que sea accesible desde cualquier lugar del proyecto) la declaramos en la pseudoclase <strong>:root</strong>
+          que apunta al elemento más alto del DOM <strong>html</strong> pero tiene más especificidad que el selector
+          de etiqueta. Te recomendamos esta <a href="https://slides.com/henryzarza/stacking-variables" target="blank">presentación</a>
+          para que conozcas un poco más de las variables de CSS, este vídeo de <a href=https://www.youtube.com/watch?v=2an6-WVPuJU target=blank>Lea Verou</a>
+          y este <a href=https://medium.freecodecamp.org/everything-you-need-to-know-about-css-variables-c74d922ea855?gi=a6a40e16e586 target=blank>artículo</a> interesante. <br>
+          Los filtros de CSS sirven para aplicar efectos gráficos como el desenfoque, escala de grises o cambio de color de un elemento, principalmente imágenes. Los filtros se usan comúnmente para ajustar la representación de imágenes, fondos y bordes. La sintaxis para usar esta propiedad es la siguiente: <strog>filter: [filter-function]</strog> en donde filter-function hace referencia a cualquiera de los filtros que existen actualmente, la lista completa la puedes encontrar en este <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter" target="blank">link</a>,
+          <a href="https://www.w3schools.com/CSSref/css3_pr_filter.asp" target="blank">W3C</a> y en este
+          <a href="https://css-tricks.com/almanac/properties/f/filter/" target="blank">artículo</a>. <br>
+          Lo primero que hicimos fue en nuestro HTML definir una imagen a la cual le vamos a aplicar losfiltros y unos inputs con el id correspondiente a la propiedad de filtro que vamos a utilizar, con los atributos <strong>min, max, step y value</strong> definimos consecutivamente el mínimo, el máximo, los saltos y el valor inicial del input (todos estos valores corresponden de acuerdo a los valores que recibe cada filtro según la documentación). En nuestro CSS definimos en el elemento raíz (:root) las variables que vamos a usar para cada uno de los filtros sin unidades de medida, seteamos los estilos del navegador y aplicamos otras propiedades para centrar la imagen y los inputs, lo importante acá es que a la clase de la imagen le estamos asignando en la propiedad filter cada uno de las funciones de filtros que vamos a usar, con sus respectivas variables de CSS. Por último en JavaScript, estamos seleccionando todos los inputs que tenemos en nuestro HTML y luego le añadimos el escuchador para el evento input, una vez ahí obtenemos el id y el valor del elemento que cambió, anteriormente habíamos seleccionado la imagen, entonces con la referencia de esa imagen lo que hacemos es decirle (<strong>image.style.setProperty(`--${id}`, value)</strong>), que a la propiedad con el id que estamos capturando la cambie por el valor que obtenemos (la propiedad corresponde a la variable de CSS).
+        </div>
+        <div class="examples">
+          <div class="content-example">
+            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result" data-user="HenryZarza" data-slug-hash="wRvape" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="We code - CSS variables and filters">
+              <span>See the Pen <a href="https://codepen.io/HenryZarza/pen/wRvape/">
+              We code - CSS variables and filters</a> by Henry Zarza (<a href="https://codepen.io/HenryZarza">@HenryZarza</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+          </div>
+          <div class="content-example">
+            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="SKOLZ" data-slug-hash="PXVwdZ" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="We code: summer edition - CSS variables &amp;amp; filters">
+              <span>See the Pen <a href="https://codepen.io/SKOLZ/pen/PXVwdZ/">
+              We code: summer edition - CSS variables &amp; filters</a> by Gabriel Zanzotti (<a href="https://codepen.io/SKOLZ">@SKOLZ</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="page page-blend" id="page-blend">
       <header class="header">
-        <h1 class="header__title">Create your blend</h1>
+        <h2 class="header__title">Create your blend</h2>
         <p class="info">
           "Mezclar componentes utilizando la propiedad <strong>mix-blend-mode</strong>, analizar los distintos
           resultados que se pueden lograr y la compatibilidad."
@@ -470,7 +511,7 @@
     </div>
     <div class="page page-clip" id="page-clip">
       <header class="header">
-        <h1 class="header__title">Clip-path</h1>
+        <h2 class="header__title">Clip-path</h2>
         <p class="info">
           "Análisis de la propiedad <strong>clip-path</strong> de CSS, mostrando sus distintas opciones y su
           compatibilidad."
@@ -480,7 +521,7 @@
     </div>
     <div class="page page-comic" id="page-comic">
       <header class="header">
-        <h1 class="header__title">Comic con Grid</h1>
+        <h2 class="header__title">Comic con Grid</h2>
         <p class="info">
           "<strong>CSS Grid</strong> con la propiedad <strong>clip-path</strong> para hacer un comic genial."
           &mdash; Henry Zarza
@@ -489,7 +530,7 @@
     </div>
     <div class="page page-animation" id="page-animation">
       <header class="header">
-        <h1 class="header__title">Principios de animación</h1>
+        <h2 class="header__title">Principios de animación</h2>
         <p class="info">
           "Uso de la biblioteca <strong>anime.js</strong> para explicar los principios de las animaciones."
           &mdash; Gabriel Porras
@@ -498,7 +539,7 @@
     </div>
     <div class="page page-mojs" id="page-mojs">
       <header class="header">
-        <h1 class="header__title">Micro interacción con mo.js</h1>
+        <h2 class="header__title">Micro interacción con mo.js</h2>
         <p class="info">
           "Uso de la biblioteca <strong>mo.js</strong> para hacer una micro interacción como la de Instagram."
           &mdash; Henry Zarza
@@ -507,7 +548,7 @@
     </div>
     <div class="page page-canvas" id="page-canvas">
       <header class="header">
-        <h1 class="header__title">Canvas</h1>
+        <h2 class="header__title">Canvas</h2>
         <p class="info">
           "Uso de <strong>canvas</strong> para hacer un tablero en el que se pueda pintar."
           &mdash; Henry Zarza

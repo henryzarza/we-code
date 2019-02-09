@@ -126,7 +126,7 @@ code {
 }
 
 .svg-title {
-  animation: shadow 1s ease-in-out 4s forwards;
+  animation: shadow 1s ease-in-out 5s forwards;
   margin-bottom: 2rem;
   width: 100%;
 }
