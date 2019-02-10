@@ -567,6 +567,48 @@
           &mdash; Henry Zarza
         </p>
       </header>
+      <div class="content">
+        <div class="documentation">
+          En este ejercicio continuamos repasando la propiedad clip-path junto con un poco de
+          <strong>CSS grid</strong> para hacer un comic, la teoría importante a mencionar acá es
+          que la propiedad <strong>clip-path</strong> es animable, pero para poder animarla tenemos
+          que tener una regla de oro, siempre en cada uno de los pasos de nuestra animación los
+          vértices o puntos de quiebre deben de ser iguales; es decir, si yo defino algo como esto:
+          <strong>clip-path: polygon(50% 0%, 60% 40%, 100% 50%, 60% 60%);</strong> debo de tener
+          en cuenta que en los steps de mi animación debo de tener 4 puntos de coordenadas para
+          poder que funcione. <br>
+          Ahora sí, explicando un poco el ejercicio que hicimos, en primera instancia en nuestro
+          HTML definimos un div al cual le asignamos la clase <strong>content-comic</strong> y dentro
+          de este creamos otros 4 divs cada uno con la clase <strong>item</strong> y en nuestro CSS
+          a la clase <strong>.content-comic</strong> le agregamos algunas propiedades a destacar son:
+          <strong>display: grid; grid-gap: 10px; grid-template-columns: repeat(2, 1fr);</strong> para
+          decirle que ese elemento va a ser con el nuevo sistema de grillas de CSS, sino sabes que
+          es CSS Grid puedes leerte este <a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="blank">artículo</a>
+          en el cual lo explican muy bien, también la documentación de <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout" target="blank">Mozilla</a>
+          y estos <a href="https://cssgrid.io/" target="blank">videos</a>; la otra propiedad la usamos para
+          especificar el espaciado que va a haber entre los elementos de la grilla y con la última propiedad
+          le estamos diciendo que queremos 2 columnas. Luego en la clase <strong>.item</strong> definimos
+          en la propiedad <strong>background</strong> los estilos generales que van a tener los items,
+          para cada uno de los items definimos una imagen, luego le decimos a cada uno que ocupe 50 espacios
+          a nivel de filas con la propiedad <strong>grid-row</strong> y con la propiedad <strong>grid-column</strong>
+          le especificamos que ocupe 2 ó 1 espacio para las 2 columnas que tenemos, luego haciendo uso de
+          la propiedad <strong>clip-path</strong> empezamos a recortar nuestros items para asemejarlos a
+          los cortes que vemos en un comic normalmente (esto lo hicimos con esta <a href="https://bennettfeely.com/clippy/" target="blank">herramienta</a>)
+          y por último es importante mencionar que cuando hicimos los recortes quedaron algunos espacios
+          en blanco, para esto utilizamos márgenes negativos para cuadrar los elementos y que todo se
+          viera estéticamente agradable. Te dejamos este <a href="https://www.mozilla-hispano.org/css-shapes-clipping-masking-como-usarlos/" target="blank">link</a>
+          con una documentación bastante interesante acerca de <strong>clip-path</strong>.
+        </div>
+        <div class="examples">
+          <div class="content-example">
+            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="HenryZarza" data-slug-hash="jQoaXm" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="We code - Comic Grid and clip path">
+              <span>See the Pen <a href="https://codepen.io/HenryZarza/pen/jQoaXm/">
+              We code - Comic Grid and clip path</a> by Henry Zarza (<a href="https://codepen.io/HenryZarza">@HenryZarza</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="page page-animation" id="page-animation">
       <header class="header">
@@ -576,6 +618,50 @@
           &mdash; Gabriel Porras
         </p>
       </header>
+      <div class="content">
+        <div class="documentation">
+          En este ejercicio revisamos algunas de las buenas prácticas propuestas por Taras Skytskyi
+          en su artículo <a href="http://bit.ly/AnimationInUX" target="blank">“The ultimate guide to proper use of animation in UX”</a>
+          Inicialmente vimos la diferencia entre las animaciones de interfaz de usuario y las animaciones “autónomas”. <br>
+          Luego vimos las formas de hacer animaciones en la web: via CSS y vía JavaScript. Se definió que
+          las animaciones via CSS deberán ser siempre la primera opción, siempre y cuando, se necesiten
+          funciones especiales, que las librerías de animación de JavaScript siempre tendrán.
+          Posteriormente se hizo una corta presentación  de la librería <a href="https://animejs.com/" target="blank">AnimeJS</a>
+          que se seleccionó para los ejemplos por su popularidad y livianeza.
+          Finalmente se comenzaron a ver y aplicar con ejemplos 6 de las reglas definidas en al artículo: <br>
+          1. Duración y velocidad de una animación en la web <br>
+          2. Evitar el uso de rebotes y desenfocados <br>
+          3. Velocidad cuando se animan elementos repetidos (cards, items de una lista…) <br>
+          4. Cuándo usar una velocidad constante <br>
+          5. Qué efecto usar cuando un elemento sale de la pantalla <br>
+          6. Qué efecto usar cuando entra <br>
+          También está este vídeo en el cual nos habla de los principios de <a href="https://www.youtube.com/watch?v=uDqjIdI4bF4" target="blank">animación</a> y esta
+          <a href="https://docs.google.com/presentation/d/1M540FzzcnXYoaEcLPaUBFkbXltgA9vGMK55sz1Q8YWI/edit#slide=id.p" target="blank">presentación</a>.
+        </div>
+        <div class="examples">
+          <div class="content-example">
+            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result" data-user="gabrielizalo" data-slug-hash="qgWYOz" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="Proper Use of Animation in UX - Example AnimeJS">
+              <span>See the Pen <a href="https://codepen.io/gabrielizalo/pen/qgWYOz/">
+              Proper Use of Animation in UX - Example AnimeJS</a> by Gabriel Porras (<a href="https://codepen.io/gabrielizalo">@gabrielizalo</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+          </div>
+          <div class="content-example">
+            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result" data-user="HenryZarza" data-slug-hash="LgyNeY" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="Anime.js - Example transform">
+              <span>See the Pen <a href="https://codepen.io/HenryZarza/pen/LgyNeY/">
+              Anime.js - Example transform</a> by Henry Zarza (<a href="https://codepen.io/HenryZarza">@HenryZarza</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+          </div>
+          <div class="content-example">
+            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="HenryZarza" data-slug-hash="GYmjRP" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="Anime.js - Example Movement ">
+              <span>See the Pen <a href="https://codepen.io/HenryZarza/pen/GYmjRP/">
+              Anime.js - Example Movement </a> by Henry Zarza (<a href="https://codepen.io/HenryZarza">@HenryZarza</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="page page-mojs" id="page-mojs">
       <header class="header">
@@ -585,6 +671,59 @@
           &mdash; Henry Zarza
         </p>
       </header>
+      <div class="content">
+        <div class="documentation">
+          En este ejercicio vimos el uso de una biblioteca muy popular de JavaScript llamada <a href="https://github.com/legomushroom/mojs" target="blank">mo.js</a>
+          esta biblioteca nos permite realizar micro interacciones y otras cosas geniales de una manera
+          sencilla, su documentación es muy buena y la verdad es que tiene un gran potencial para ser
+          explotado, lastimosamente su creador le dejo de dar soporte en diciembre del 2018, pero es
+          tanta su importancia en la comunidad de desarrolladores que existe un proyecto para mantenerlo y
+          hacerle mejoras. Pero antes de entrar en detalles con su implementación es pertinente explicar
+          que es una micro interacción y de que se compone. Una micro interacción en el ámbito de UI
+          (User Interface), es una animación que se realiza para dar feedback a los usuarios de una
+          interacción que estos tuvieron con un componente de la interfaz. Es algo así como
+          “las transiciones entre interacciones”; ya que esta acción se traduce como una transición
+          en los elementos con los cuáles se está interactuando, aportando un significado a la
+          interfaz que hace mejorar la experiencia de usuario y rompiendo con la estaticidad de esta.
+          Hay que tener en cuenta algunos puntos esenciales a la hora de usar una micro interacción:
+          <strong>Objetivo</strong> ¿Qué se pretende comunicar al usuario?, <strong>Accionador</strong>
+          ¿Cuál es la interacción que la activa?, <strong>Focus</strong> ¿Dónde se centra la acción
+          en la interfaz?, <strong>Duración</strong> ¿Cuánto tiene que durar la transición? y
+          <strong>Velocidad</strong> ¿Cómo de rápida debe mostrarse?. <br>
+          Ahora si entrando en materia, vamos a omitir la explicación del CSS y del HTML, porque son
+          propiedades y elementos que usamos diariamente. Lo primero que debemos de hacer es importar
+          la biblioteca, una vez hecho esto lo primero que tenemos es la creación de una forma con la
+          sintaxis que nos dice la documentación, en este caso decidimos utilizar un corazón hecho con
+          <strong>SVG</strong> y le dimos el nombre de <strong>heart</strong>, hacemos uso de la
+          función <strong>addShape</strong> para añadir la forma, luego definimos las constantes que
+          vamos a usar en nuestro JavaScript, lo próximo que hacemos es definir un círculo el cual
+          será la onda roja que vemos cuando hacemos click en la foto, procedemos a enviarle un
+          objeto con la configuración como nos dice la <a href="https://github.com/legomushroom/mojs/blob/master/api/shape.md" target="blank">documentación</a>
+          en este <a href="https://code.tutsplus.com/tutorials/getting-started-with-mojs-animation-library-shape-module--cms-30389" target="blank">artículo</a>
+          podrás encontrar información interesante también, lo siguiente que hacemos es definir una
+          forma llamada <strong>burst</strong> la cual nos sirve para hacer un efecto de ráfaga; es decir,
+          los puntos que se dispersan cuando hacemos click en la foto, el objeto de configuración que se
+          le envía lo podemos encontrar en la <a href="https://github.com/legomushroom/mojs/blob/master/api/burst.md" target="blank">documentación</a>,
+          lo importante a resaltar acá es la propiedad children mediante esta propiedad le especificamos
+          los estilos y la forma que queremos para los elementos que van a estar presentes en la ráfaga,
+          para más información podemos leer este <a href="https://code.tutsplus.com/tutorials/getting-started-with-mojs-animation-library-burst-module--cms-30390" target="blank">artículo</a>,
+          por último añadimos un escuchador al evento click para la imagen, en este evento lo que hacemos es
+          llamar al evento tune y replay de cada una de las formas que definimos anteriormente para mandarle
+          las coordenadas en las que vamos a pintar nuestra forma (en nuestro caso las coordenadas donde le
+          dimos click) y para indicarle que queremos que se pueda repetir esa animación. En este
+          <a href="https://code.tutsplus.com/tutorials/getting-started-with-mojs-animation-library-html-module--cms-30388" target="blank">artículo</a> hay un
+          tutorial paso a paso y más completo del uso de esta biblioteca.
+        </div>
+        <div class="examples">
+          <div class="content-example">
+            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="js,result" data-user="HenryZarza" data-slug-hash="RqmjNq" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="We code - Mo.js">
+              <span>See the Pen <a href="https://codepen.io/HenryZarza/pen/RqmjNq/">
+              We code - Mo.js</a> by Henry Zarza (<a href="https://codepen.io/HenryZarza">@HenryZarza</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="page page-canvas" id="page-canvas">
       <header class="header">
