@@ -54,7 +54,7 @@ code {
 
 .page.page-home {
   align-items: center;
-  background: var(--white) url(../images/beach.jpeg) no-repeat center/cover;
+  background: var(--gray) url(../images/beach.jpeg) no-repeat center/cover;
   display: flex;
   justify-content: center;
 }
@@ -62,46 +62,6 @@ code {
 .page {
   background-color: var(--white);
 }
-
-/* .page.page-spotlight {
-	background: url(../images/sun.png) no-repeat right top, url(../images/beach-ball.png) no-repeat left bottom, url(../images/dolphin.png) no-repeat 102% bottom, var(--white);
-}
-
-.page.page-mask {
-	background: url(../images/watermelon.png) no-repeat 103% -3%, url(../images/sun-umbrella.png) no-repeat left 100.5%, url(../images/palm.png) no-repeat 100% bottom, var(--white);
-}
-
-.page.page-sticky {
-	background: url(../images/popsicle.png) no-repeat 102% top, url(../images/sand-bucket.png) no-repeat left bottom, url(../images/hawaiian.png) no-repeat 102% bottom, var(--white);
-}
-
-.page.page-variables {
-	background: url(../images/dolphin.png) no-repeat 101% -3%, url(../images/palm.png) no-repeat left bottom, url(../images/sand-bucket.png) no-repeat right bottom, var(--white);
-}
-
-.page.page-blend {
-	background: url(../images/beach-ball.png) no-repeat 102% top, url(../images/hawaiian.png) no-repeat left bottom, url(../images/watermelon.png) no-repeat 101% 103%, var(--white);
-}
-
-.page.page-clip {
-	background: url(../images/palm.png) no-repeat right top, url(../images/sun.png) no-repeat -6% 103%, url(../images/sun-umbrella.png) no-repeat right 100.5%, var(--white);
-}
-
-.page.page-comic {
-	background: url(../images/sand-bucket.png) no-repeat right top, url(../images/watermelon.png) no-repeat left 103%, url(../images/beach-ball.png) no-repeat 101% 107%, var(--white);
-}
-
-.page.page-animation {
-	background: url(../images/hawaiian.png) no-repeat 102% top, url(../images/dolphin.png) no-repeat left 104%, url(../images/popsicle.png) no-repeat 102% bottom, var(--white);
-}
-
-.page.page-mojs {
-	background: url(../images/sun-umbrella.png) no-repeat right top, url(../images/sand-bucket.png) no-repeat left bottom, url(../images/sun.png) no-repeat 106% 103%, var(--white);
-}
-
-.page.page-canvas {
-	background: url(../images/sun.png) no-repeat 103% top, url(../images/palm.png) no-repeat left bottom, url(../images/hawaiian.png) no-repeat 101% bottom, var(--white);
-} */
 
 .content {
   display: flex;
