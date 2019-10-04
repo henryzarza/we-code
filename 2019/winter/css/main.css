@@ -31,6 +31,38 @@ body {
   --section-bg-color: var(--dark-blue);
 }
 
+.section--main {
+  align-items: flex-start;
+  background: var(--black) url('../assets/background.jpeg') no-repeat center center / cover;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  padding: 4rem;
+  position: relative;
+}
+
+.section--main::before {
+  background-color: rgba(0, 0, 0, 0.3);
+  content: '';
+  height: 100vh;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+}
+
+.title {
+  color: var(--white);
+  font-size: 4rem;
+  font-weight: 100;
+  position: relative;
+  text-shadow: 2px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.title--big {
+  font-size: 7rem;
+}
+
 .section__item-img {
   background-color: var(--white);
   min-width: 50%;
@@ -78,9 +110,9 @@ body {
 
 .section__content {
   display: flex;
-  min-width: 50%;
   flex-direction: column;
   justify-content: center;
+  min-width: 50%;
   padding: 2rem;
 }
 
@@ -122,6 +154,29 @@ body {
   transform: scaleY(1);
 }
 
+.svg-arrow {
+  bottom: 0;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  width: 1.5rem;
+}
+
+.arrow {
+  animation: levitate 0.35s ease-in alternate infinite;
+  fill: var(--white);
+}
+
+@keyframes levitate {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+
 @media screen and (max-width: 55rem) {
   .section, .section:nth-child(even) {
     flex-direction: column;
@@ -141,5 +196,15 @@ body {
   .section__content {
     display: block;
     overflow-y: auto;
+  }
+  .title {
+    color: var(--white);
+    font-size: 2.5rem;
+    font-weight: 100;
+    position: relative;
+    text-shadow: 2px 1px 1px rgba(0, 0, 0, 0.3);
+  }
+  .title--big {
+    font-size: 5rem;
   }
 }
