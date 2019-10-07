@@ -1,0 +1,87 @@
+:root {
+  --dark-gray: #323437;
+  --chalk: #C8C8D0;
+  --white: #FFF;
+}
+
+*, *:after, *:before {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--dark-gray);
+  color: var(--chalk);
+}
+
+.hidden {
+  height: 0;
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  width: 0;
+}
+
+.content {
+  background: url(assets/confetti.svg) repeat center center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  overflow: hidden;
+  padding: 1.5rem;
+  width: 100%;
+}
+
+.header__title {
+  font-size: 4rem;
+  font-weight: 200;
+  margin: 0 auto 1rem;
+  max-width: 100%;
+  width: 1000px;
+}
+
+.grid {
+  display: grid;
+  grid-gap: 6rem;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 1000px;
+}
+
+.folder-dummy {
+  pointer-events: none;
+}
+
+.folder-dummy::after {
+  background-color: var(--chalk);
+  content: '';
+  display: block;
+  height: 0.6rem;
+  margin: 0 0.35rem;
+  opacity: 0.9;
+  width: calc(5rem * 0.6);
+}
+
+.folder-dummy>svg {
+  fill: var(--chalk);
+  height: 5rem;
+  opacity: 0.9;
+  width: 5rem;
+}
+
+@media screen and (max-width: 30rem) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .folder-dummy {
+    display: none;
+  }
+  .header__title {
+    font-size: 2.5rem;
+  }
+}
