@@ -14,440 +14,453 @@
 </head>
 
 <body>
-  <section class="section section--main">
-    <h1 class="title">We Code:</h1>
-    <h1 class="title title--big">Winter Edition</h1>
-    <svg class="svg-arrow" viewBox="0 0 22 35">
-      <polygon class="arrow"
-        points="20.58,11.584 12.004,20.158 12.004,0 9.996,0 9.996,20.158 1.42,11.584 0,13.004 11,22 22,13.004 ">
-      </polygon>
-    </svg>
-  </section>
-  <section class="section">
-    <div class="section__item-img" data-displacement="./assets/wave.jpg">
-      <img src="assets/image-6.jpeg" />
-      <img src="assets/image-7.jpeg" />
-      <div class="section__item-content">
-        <h2 class="section__item-title">Speech detection</h2>
-        <p class="section__item-subtitle">
-          Uso de la API SpeechRecognition de los navegadores para hacer reconocimiento de voz.
-          <span class="section__item-name">Henry Zarza</span>
+  <div id="container">
+    <section class="section section--main">
+      <canvas class="snow"></canvas>
+      <h1 class="title">We Code:</h1>
+      <h1 class="title title--big">Winter Edition</h1>
+      <p class="section__description">
+        Hace un tiempo se desarrolló una prueba piloto de algo que llamamos We code, en donde se desarrollaron
+        interfaces
+        e interacciones llamativas usando propiedades de CSS y funcionalidades de JavaScript que no usamos comúnmente.
+        <br>
+        En está <a
+          href="https://docs.google.com/presentation/d/12Xt0omlbUC17eq3167LUL7PR5NCMYtgGwyPy0CPZJ4g/edit?usp=sharing"
+          target="blank" class="link">presentación</a> puedes encontrar más información al respecto.
+      </p>
+      <svg class="svg-arrow" viewBox="0 0 22 35">
+        <polygon class="arrow"
+          points="20.58,11.584 12.004,20.158 12.004,0 9.996,0 9.996,20.158 1.42,11.584 0,13.004 11,22 22,13.004 ">
+        </polygon>
+      </svg>
+    </section>
+    <section class="section">
+      <div class="section__item-img" data-displacement="./assets/wave.jpg">
+        <img src="assets/image-6.jpeg" />
+        <img src="assets/image-7.jpeg" />
+        <div class="section__item-content">
+          <h2 class="section__item-title">Speech detection</h2>
+          <p class="section__item-subtitle">
+            Uso de la API SpeechRecognition de los navegadores para hacer reconocimiento de voz.
+            <span class="section__item-name">Henry Zarza</span>
+          </p>
+        </div>
+      </div>
+      <div class="section__content">
+        <p class="section__content-description">
+          En esta charla, Henry nos explicó acerca de una API de JavaScript llamada SpeechRecognition; la cual permite
+          acceder al reconocimiento de voz a través de la interfaz de SpeechRecognition, que da la capacidad de
+          reconocer
+          el contexto de voz desde una entrada de audio y responder de manera adecuada.
+          En esta <a href="https://slides.com/henryzarza/web-speech-api#/" target="blank" class="link">presentación</a>
+          puedes encontrar más información.
+          Y en este <a href="https://drive.google.com/open?id=16A85bXKBUop1vdfU9dJEnC5tcKrta3cZ" target="blank"
+            class="link">link</a> el video
+          de la charla.
+        </p>
+        <p class="codepen" data-height="325" data-theme-id="dark" data-default-tab="css,result" data-user="HenryZarza"
+          data-slug-hash="RXwbYL" data-preview="true"
+          style="height: 325px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+          data-pen-title="We code - Speech detection">
+          <span>See the Pen <a href="https://codepen.io/HenryZarza/pen/RXwbYL">
+              We code - Speech detection</a> by Henry Zarza (<a href="https://codepen.io/HenryZarza">@HenryZarza</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
         </p>
       </div>
-    </div>
-    <div class="section__content">
-      <p class="section__content-description">
-        En esta charla, Henry nos explicó acerca de una API de JavaScript llamada SpeechRecognition; la cual permite
-        acceder al reconocimiento de voz a través de la interfaz de SpeechRecognition, que da la capacidad de
-        reconocer
-        el contexto de voz desde una entrada de audio y responder de manera adecuada.
-        En esta <a href="https://slides.com/henryzarza/web-speech-api#/" target="blank" class="link">presentación</a>
-        puedes encontrar más información.
-        Y en este <a href="https://drive.google.com/open?id=16A85bXKBUop1vdfU9dJEnC5tcKrta3cZ" target="blank"
-          class="link">link</a> el video
-        de la charla.
-      </p>
-      <p class="codepen" data-height="325" data-theme-id="dark" data-default-tab="css,result" data-user="HenryZarza"
-        data-slug-hash="RXwbYL" data-preview="true"
-        style="height: 325px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-        data-pen-title="We code - Speech detection">
-        <span>See the Pen <a href="https://codepen.io/HenryZarza/pen/RXwbYL">
-            We code - Speech detection</a> by Henry Zarza (<a href="https://codepen.io/HenryZarza">@HenryZarza</a>)
-          on <a href="https://codepen.io">CodePen</a>.</span>
-      </p>
-    </div>
-  </section>
-  <section class="section">
-    <div class="section__item-img" data-displacement="./assets/sparkles.jpg">
-      <img src="assets/image-2.jpeg" />
-      <img src="assets/image-3.jpeg" />
-      <div class="section__item-content">
-        <h2 class="section__item-title">Stacking context</h2>
-        <p class="section__item-subtitle">
-          Explicar por qué el z-index puede no funcionar y qué es un stacking context.
-          <span class="section__item-name">Damian Finkelstein</span>
+    </section>
+    <section class="section">
+      <div class="section__item-img" data-displacement="./assets/sparkles.jpg">
+        <img src="assets/image-2.jpeg" />
+        <img src="assets/image-3.jpeg" />
+        <div class="section__item-content">
+          <h2 class="section__item-title">Stacking context</h2>
+          <p class="section__item-subtitle">
+            Explicar por qué el z-index puede no funcionar y qué es un stacking context.
+            <span class="section__item-name">Damian Finkelstein</span>
+          </p>
+        </div>
+      </div>
+      <div class="section__content">
+        <p class="section__content-description">
+          En esta charla, Capi nos explicó acerca de los contextos de apilamientos en CSS, el orden de los contextos y
+          las razones de porque a veces no nos funciona la propiedad z-index por mas valor que le asignemos.
+          En esta <a
+            href="https://docs.google.com/presentation/d/1XZ5NMNWk5SUfi7If15COhH5CGsfDx0Mm8rnQjIU9Ko8/edit?usp=sharing"
+            target="blank" class="link">presentación</a> puedes encontrar más información.
+          Y en este <a href="https://drive.google.com/open?id=1EAn5KJh1BgMXVMy-Dcnlz81E9cXlriKb" target="blank"
+            class="link">link</a> el video de la charla.
+        </p>
+        <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result"
+          data-user="dami-n-finkelstein" data-slug-hash="QeOyXP" data-preview="true"
+          style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+          data-pen-title="Stacking order test">
+          <span>See the Pen <a href="https://codepen.io/dami-n-finkelstein/pen/QeOyXP">
+              Stacking order test</a> by Damián Finkelstein (<a
+              href="https://codepen.io/dami-n-finkelstein">@dami-n-finkelstein</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
         </p>
       </div>
-    </div>
-    <div class="section__content">
-      <p class="section__content-description">
-        En esta charla, Capi nos explicó acerca de los contextos de apilamientos en CSS, el orden de los contextos y
-        las razones de porque a veces no nos funciona la propiedad z-index por mas valor que le asignemos.
-        En esta <a
-          href="https://docs.google.com/presentation/d/1XZ5NMNWk5SUfi7If15COhH5CGsfDx0Mm8rnQjIU9Ko8/edit?usp=sharing"
-          target="blank" class="link">presentación</a> puedes encontrar más información.
-        Y en este <a href="https://drive.google.com/open?id=1EAn5KJh1BgMXVMy-Dcnlz81E9cXlriKb" target="blank"
-          class="link">link</a> el video de la charla.
-      </p>
-      <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result"
-        data-user="dami-n-finkelstein" data-slug-hash="QeOyXP" data-preview="true"
-        style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-        data-pen-title="Stacking order test">
-        <span>See the Pen <a href="https://codepen.io/dami-n-finkelstein/pen/QeOyXP">
-            Stacking order test</a> by Damián Finkelstein (<a
-            href="https://codepen.io/dami-n-finkelstein">@dami-n-finkelstein</a>)
-          on <a href="https://codepen.io">CodePen</a>.</span>
-      </p>
-    </div>
-  </section>
-  <section class="section">
-    <div class="section__item-img" data-displacement="./assets/wave.jpg">
-      <img src="assets/image-5.jpeg" />
-      <img src="assets/image-9.jpeg" />
-      <div class="section__item-content">
-        <h2 class="section__item-title">Teoría del color</h2>
-        <p class="section__item-subtitle">
-          Reglas básicas de los modelos de color, y analizar el efecto del color en la percepción.
-          <span class="section__item-name">Mateo Ruiz</span>
+    </section>
+    <section class="section">
+      <div class="section__item-img" data-displacement="./assets/wave.jpg">
+        <img src="assets/image-5.jpeg" />
+        <img src="assets/image-9.jpeg" />
+        <div class="section__item-content">
+          <h2 class="section__item-title">Teoría del color</h2>
+          <p class="section__item-subtitle">
+            Reglas básicas de los modelos de color, y analizar el efecto del color en la percepción.
+            <span class="section__item-name">Mateo Ruiz</span>
+          </p>
+        </div>
+      </div>
+      <div class="section__content">
+        <p class="section__content-description">
+          En esta oportunidad Tute nos explicó acerca de la teoría del color y la importancia que tienen estos a la hora
+          de transmitir emociones y sensaciones, además de darnos algunas herramientas para escoger nuestras paletas de
+          colores.
+          En este <a
+            href="https://docs.google.com/presentation/d/1JxRDxD3PiwE88cjBiFkcplZilQwjN7COK7Yf6BS0K5M/edit?usp=sharing"
+            target="blank" class="link">link</a> puedes encontrar más información.
+          Y en este <a href="https://drive.google.com/open?id=1Hgp8-JrR-aFTAPBUZutBjBI-exbb2Opv" target="blank"
+            class="link">link</a> el video
+          de la charla.
+          Además, Tute nos dejó una actividad para que realicemos: haciendo uso del ejercicio que él realizó en <a
+            href="https://www.figma.com/file/LSt1I8IFPgZt06MLln1Tui/CARD---TEST?node-id=0%3A1" target="blank"
+            class="link">Figma</a> (debemos de hacer un duplicado
+          del diseño así no se edita sobre el original), cambiarle los colores por los que consideremos que son los
+          indicados y luego implementarlo en el Codepen que se encuentra abajo, para escoger los colores nos podemos
+          guiar de algunas herramientas para paletas
+          <a href="https://coolors.co" target="blank" class="link">SPACE</a> y <a href="https://colors.eva.design/"
+            target="blank" class="link">Deep Learning</a>.
+        </p>
+        <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="HenryZarza"
+          data-slug-hash="rXGraJ" data-preview="true"
+          style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+          data-pen-title="Card test">
+          <span>See the Pen <a href="https://codepen.io/HenryZarza/pen/rXGraJ">
+              Card test</a> by Henry Zarza (<a href="https://codepen.io/HenryZarza">@HenryZarza</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
         </p>
       </div>
-    </div>
-    <div class="section__content">
-      <p class="section__content-description">
-        En esta oportunidad Tute nos explicó acerca de la teoría del color y la importancia que tienen estos a la hora
-        de transmitir emociones y sensaciones, además de darnos algunas herramientas para escoger nuestras paletas de
-        colores.
-        En este <a
-          href="https://docs.google.com/presentation/d/1JxRDxD3PiwE88cjBiFkcplZilQwjN7COK7Yf6BS0K5M/edit?usp=sharing"
-          target="blank" class="link">link</a> puedes encontrar más información.
-        Y en este <a href="https://drive.google.com/open?id=1Hgp8-JrR-aFTAPBUZutBjBI-exbb2Opv" target="blank"
-          class="link">link</a> el video
-        de la charla.
-        Además, Tute nos dejó una actividad para que realicemos: haciendo uso del ejercicio que él realizó en <a
-          href="https://www.figma.com/file/LSt1I8IFPgZt06MLln1Tui/CARD---TEST?node-id=0%3A1" target="blank"
-          class="link">Figma</a> (debemos de hacer un duplicado
-        del diseño así no se edita sobre el original), cambiarle los colores por los que consideremos que son los
-        indicados y luego implementarlo en el Codepen que se encuentra abajo, para escoger los colores nos podemos
-        guiar de algunas herramientas para paletas
-        <a href="https://coolors.co" target="blank" class="link">SPACE</a> y <a href="https://colors.eva.design/"
-          target="blank" class="link">Deep Learning</a>.
-      </p>
-      <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="HenryZarza"
-        data-slug-hash="rXGraJ" data-preview="true"
-        style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-        data-pen-title="Card test">
-        <span>See the Pen <a href="https://codepen.io/HenryZarza/pen/rXGraJ">
-            Card test</a> by Henry Zarza (<a href="https://codepen.io/HenryZarza">@HenryZarza</a>)
-          on <a href="https://codepen.io">CodePen</a>.</span>
-      </p>
-    </div>
-  </section>
-  <section class="section">
-    <div class="section__item-img" data-displacement="./assets/sparkles.jpg">
-      <img src="assets/image-1.jpeg" />
-      <img src="assets/image-8.jpeg" />
-      <div class="section__item-content">
-        <h2 class="section__item-title">Countdown only with CSS</h2>
-        <p class="section__item-subtitle">
-          Uso de las propiedades counter-reset y counter-increment para crear una cuenta regresiva.
-          <span class="section__item-name">Raúl Suescún</span>
+    </section>
+    <section class="section">
+      <div class="section__item-img" data-displacement="./assets/sparkles.jpg">
+        <img src="assets/image-1.jpeg" />
+        <img src="assets/image-8.jpeg" />
+        <div class="section__item-content">
+          <h2 class="section__item-title">Countdown only with CSS</h2>
+          <p class="section__item-subtitle">
+            Uso de las propiedades counter-reset y counter-increment para crear una cuenta regresiva.
+            <span class="section__item-name">Raúl Suescún</span>
+          </p>
+        </div>
+      </div>
+      <div class="section__content">
+        <p class="section__content-description">
+          Raúl nos enseño una propiedad muy interesante de CSS que nos sirve para hacer contadores y otras cositas.
+          En esta <a
+            href="https://docs.google.com/presentation/d/1O5sbYKpB9aEtiiTqTRNDdtlLX8Stydb0l7zu_eSKK4U/edit?usp=sharing"
+            target="blank" class="link">presentación</a> puedes encontrar más información.
+          Y en este <a href="https://drive.google.com/open?id=1uDd6P6Zv7ktv3Mhpcy3x-c7I8dbgLH_w" target="blank"
+            class="link">link</a> el video
+          de la charla.
+        </p>
+        <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="raulsuescun"
+          data-slug-hash="dwLWyw" data-preview="true"
+          style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+          data-pen-title="Css counter - Css Only Countdown">
+          <span>See the Pen <a href="https://codepen.io/raulsuescun/pen/dwLWyw">
+              Css counter - Css Only Countdown</a> by Raúl Suescún (<a
+              href="https://codepen.io/raulsuescun">@raulsuescun</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
         </p>
       </div>
-    </div>
-    <div class="section__content">
-      <p class="section__content-description">
-        Raúl nos enseño una propiedad muy interesante de CSS que nos sirve para hacer contadores y otras cositas.
-        En esta <a
-          href="https://docs.google.com/presentation/d/1O5sbYKpB9aEtiiTqTRNDdtlLX8Stydb0l7zu_eSKK4U/edit?usp=sharing"
-          target="blank" class="link">presentación</a> puedes encontrar más información.
-        Y en este <a href="https://drive.google.com/open?id=1uDd6P6Zv7ktv3Mhpcy3x-c7I8dbgLH_w" target="blank"
-          class="link">link</a> el video
-        de la charla.
-      </p>
-      <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="raulsuescun"
-        data-slug-hash="dwLWyw" data-preview="true"
-        style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-        data-pen-title="Css counter - Css Only Countdown">
-        <span>See the Pen <a href="https://codepen.io/raulsuescun/pen/dwLWyw">
-            Css counter - Css Only Countdown</a> by Raúl Suescún (<a
-            href="https://codepen.io/raulsuescun">@raulsuescun</a>)
-          on <a href="https://codepen.io">CodePen</a>.</span>
-      </p>
-    </div>
-  </section>
-  <section class="section">
-    <div class="section__item-img" data-displacement="./assets/wave.jpg">
-      <img src="assets/image-10.jpeg" />
-      <img src="assets/image-2.jpeg" />
-      <div class="section__item-content">
-        <h2 class="section__item-title">Sombras en CSS</h2>
-        <p class="section__item-subtitle">
-          Efectos visuales usando propiedades de sombra de CSS.
-          <span class="section__item-name">Enrique Mejía</span>
+    </section>
+    <section class="section">
+      <div class="section__item-img" data-displacement="./assets/wave.jpg">
+        <img src="assets/image-10.jpeg" />
+        <img src="assets/image-2.jpeg" />
+        <div class="section__item-content">
+          <h2 class="section__item-title">Sombras en CSS</h2>
+          <p class="section__item-subtitle">
+            Efectos visuales usando propiedades de sombra de CSS.
+            <span class="section__item-name">Enrique Mejía</span>
+          </p>
+        </div>
+      </div>
+      <div class="section__content">
+        <p class="section__content-description">
+          Kike nos explicó conceptos acerca de las sombras, las propiedades en CSS que tenemos disponibles para
+          aplicarlas y nos dió algunos tips a tener en cuenta a la hora de usarlas.
+          En esta <a
+            href="https://docs.google.com/presentation/d/1V8jKpbbrAUF64q9TNPKgs3NAVp8ROdZnJJNhLMhgjB0/edit?usp=sharing"
+            target="blank" class="link">presentación</a> puedes encontrar más información.
+          Y en este <a href="https://drive.google.com/open?id=1ks0OYDmsdF0mhwxGsENG0nvOKIJrQyDn" target="blank"
+            class="link">link</a> el video
+          de la charla.
+        </p>
+        <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="jmtov"
+          data-slug-hash="Eqwyvr" data-preview="true"
+          style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+          data-pen-title="Shadows">
+          <span>See the Pen <a href="https://codepen.io/jmtov/pen/Eqwyvr">
+              Shadows</a> by Enrique Mejia (<a href="https://codepen.io/jmtov">@jmtov</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
         </p>
       </div>
-    </div>
-    <div class="section__content">
-      <p class="section__content-description">
-        Kike nos explicó conceptos acerca de las sombras, las propiedades en CSS que tenemos disponibles para
-        aplicarlas y nos dió algunos tips a tener en cuenta a la hora de usarlas.
-        En esta <a
-          href="https://docs.google.com/presentation/d/1V8jKpbbrAUF64q9TNPKgs3NAVp8ROdZnJJNhLMhgjB0/edit?usp=sharing"
-          target="blank" class="link">presentación</a> puedes encontrar más información.
-        Y en este <a href="https://drive.google.com/open?id=1ks0OYDmsdF0mhwxGsENG0nvOKIJrQyDn" target="blank"
-          class="link">link</a> el video
-        de la charla.
-      </p>
-      <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="jmtov"
-        data-slug-hash="Eqwyvr" data-preview="true"
-        style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-        data-pen-title="Shadows">
-        <span>See the Pen <a href="https://codepen.io/jmtov/pen/Eqwyvr">
-            Shadows</a> by Enrique Mejia (<a href="https://codepen.io/jmtov">@jmtov</a>)
-          on <a href="https://codepen.io">CodePen</a>.</span>
-      </p>
-    </div>
-  </section>
-  <section class="section">
-    <div class="section__item-img" data-displacement="./assets/sparkles.jpg">
-      <img src="assets/image-7.jpeg" />
-      <img src="assets/image-6.jpeg" />
-      <div class="section__item-content">
-        <h2 class="section__item-title">Complex animations in 5 minutes of code</h2>
-        <p class="section__item-subtitle">
-          Exportar assets desde after y packages de cada framework para usarlos sin tener que usar gifs ni
-          animaciones.
-          <span class="section__item-name">Flor García & Francisco Iglesias</span>
+    </section>
+    <section class="section">
+      <div class="section__item-img" data-displacement="./assets/sparkles.jpg">
+        <img src="assets/image-7.jpeg" />
+        <img src="assets/image-6.jpeg" />
+        <div class="section__item-content">
+          <h2 class="section__item-title">Complex animations in 5 minutes of code</h2>
+          <p class="section__item-subtitle">
+            Exportar assets desde after y packages de cada framework para usarlos sin tener que usar gifs ni
+            animaciones.
+            <span class="section__item-name">Flor García & Francisco Iglesias</span>
+          </p>
+        </div>
+      </div>
+      <div class="section__content">
+        <p class="section__content-description">
+          Flor y Frank nos explicaron como hacer animaciones complejas exportándolas como archivos JSON, usando algunas
+          bibliotecas interesantes y sin usar gifs o videos.
+          En esta <a
+            href="https://docs.google.com/presentation/d/1lNHt3l_NxIMF8YPC-Fl8Iq4MxPtQU3ORQo0UzNvSI_I/edit?usp=sharing"
+            target="blank" class="link">presentación</a> puedes encontrar más información.
+          Y en este <a href="https://drive.google.com/open?id=1vPZRlqHTZ7-C4-Q7a3urlDsns3y4MMQh" target="blank"
+            class="link">link</a> el video
+          de la charla.
         </p>
       </div>
-    </div>
-    <div class="section__content">
-      <p class="section__content-description">
-        Flor y Frank nos explicaron como hacer animaciones complejas exportándolas como archivos JSON, usando algunas
-        bibliotecas interesantes y sin usar gifs o videos.
-        En esta <a
-          href="https://docs.google.com/presentation/d/1lNHt3l_NxIMF8YPC-Fl8Iq4MxPtQU3ORQo0UzNvSI_I/edit?usp=sharing"
-          target="blank" class="link">presentación</a> puedes encontrar más información.
-        Y en este <a href="https://drive.google.com/open?id=1vPZRlqHTZ7-C4-Q7a3urlDsns3y4MMQh" target="blank"
-          class="link">link</a> el video
-        de la charla.
-      </p>
-    </div>
-  </section>
-  <section class="section">
-    <div class="section__item-img" data-displacement="./assets/wave.jpg">
-      <img src="assets/image-3.jpeg" />
-      <img src="assets/image-6.jpeg" />
-      <div class="section__item-content">
-        <h2 class="section__item-title">Accesibilidad</h2>
-        <p class="section__item-subtitle">
-          ¿Por qué es tan importante la accesibilidad en nuestros productos digitales?.
-          <span class="section__item-name">Claudia Hernández</span>
+    </section>
+    <section class="section">
+      <div class="section__item-img" data-displacement="./assets/wave.jpg">
+        <img src="assets/image-3.jpeg" />
+        <img src="assets/image-6.jpeg" />
+        <div class="section__item-content">
+          <h2 class="section__item-title">Accesibilidad</h2>
+          <p class="section__item-subtitle">
+            ¿Por qué es tan importante la accesibilidad en nuestros productos digitales?.
+            <span class="section__item-name">Claudia Hernández</span>
+          </p>
+        </div>
+      </div>
+      <div class="section__content">
+        <p class="section__content-description">
+          Clau nos explicó conceptos acerca de la accesibilidad y porque es tan importante que nuestros productos
+          digitales sean accesibles para todas las personas.
+          En esta <a
+            href="https://docs.google.com/presentation/d/18QF0lEkdsNkEEhcxZcE6JYKaFrMkNJguERkGwxx5cFg/edit?usp=sharing"
+            target="blank" class="link">presentación</a> puedes encontrar más información.
+          Y en este <a href="https://drive.google.com/open?id=1b91InUfMI84HPF9-ordtyK655fdeiMUm" target="blank"
+            class="link">link</a> el video
+          de la charla.
+          Además, nos dejó una actividad para desarrollar: al Codepen asociado a está sección debemos de aplicarle los
+          principios de accesibilidad que ella nos explicó, para esto podemos abrir el inspector de elementos y nos
+          mostrará en la consola los erroes que tenemos asociados a la accesibilidad.
+        </p>
+        <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="HenryZarza"
+          data-slug-hash="gOYaWXX" data-preview="true"
+          style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+          data-pen-title="We code - Accessibility">
+          <span>See the Pen <a href="https://codepen.io/HenryZarza/pen/gOYaWXX">
+              We code - Accessibility</a> by Henry Zarza (<a href="https://codepen.io/HenryZarza">@HenryZarza</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
         </p>
       </div>
-    </div>
-    <div class="section__content">
-      <p class="section__content-description">
-        Clau nos explicó conceptos acerca de la accesibilidad y porque es tan importante que nuestros productos
-        digitales sean accesibles para todas las personas.
-        En esta <a
-          href="https://docs.google.com/presentation/d/18QF0lEkdsNkEEhcxZcE6JYKaFrMkNJguERkGwxx5cFg/edit?usp=sharing"
-          target="blank" class="link">presentación</a> puedes encontrar más información.
-        Y en este <a href="https://drive.google.com/open?id=1b91InUfMI84HPF9-ordtyK655fdeiMUm" target="blank"
-          class="link">link</a> el video
-        de la charla.
-        Además, nos dejó una actividad para desarrollar: al Codepen asociado a está sección debemos de aplicarle los
-        principios de accesibilidad que ella nos explicó, para esto podemos abrir el inspector de elementos y nos
-        mostrará en la consola los erroes que tenemos asociados a la accesibilidad.
-      </p>
-      <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="HenryZarza"
-        data-slug-hash="gOYaWXX" data-preview="true"
-        style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-        data-pen-title="We code - Accessibility">
-        <span>See the Pen <a href="https://codepen.io/HenryZarza/pen/gOYaWXX">
-            We code - Accessibility</a> by Henry Zarza (<a href="https://codepen.io/HenryZarza">@HenryZarza</a>)
-          on <a href="https://codepen.io">CodePen</a>.</span>
-      </p>
-    </div>
-  </section>
-  <section class="section">
-    <div class="section__item-img" data-displacement="./assets/sparkles.jpg">
-      <img src="assets/image-9.jpeg" />
-      <img src="assets/image-5.jpeg" />
-      <div class="section__item-content">
-        <h2 class="section__item-title">Speech synthesis</h2>
-        <p class="section__item-subtitle">
-          Uso de la API speechSynthesis para hacer una síntesis de la voz en tiempo real.
-          <span class="section__item-name">Henry Zarza</span>
+    </section>
+    <section class="section">
+      <div class="section__item-img" data-displacement="./assets/sparkles.jpg">
+        <img src="assets/image-9.jpeg" />
+        <img src="assets/image-5.jpeg" />
+        <div class="section__item-content">
+          <h2 class="section__item-title">Speech synthesis</h2>
+          <p class="section__item-subtitle">
+            Uso de la API speechSynthesis para hacer una síntesis de la voz en tiempo real.
+            <span class="section__item-name">Henry Zarza</span>
+          </p>
+        </div>
+      </div>
+      <div class="section__content">
+        <p class="section__content-description">
+          En esta charla, Henry nos explicó la continuación de la API de JavaScript de Web speech API; en este caso la
+          de SpeechSynthesis la cual permite realizar una síntesis de la voz a través de una interfaz.
+          En esta <a href="https://slides.com/henryzarza/web-speech-api#/" target="blank" class="link">presentación</a>
+          puedes encontrar más información.
+          Y en este <a href="https://drive.google.com/open?id=1iBzcNhO_5QqJFdCK7EuWrKIJabT-pFNC" target="blank"
+            class="link">link</a> el video
+          de la charla.
+        </p>
+        <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="HenryZarza"
+          data-slug-hash="bXdyrg" data-preview="true"
+          style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+          data-pen-title="We code - Speech Synthesis">
+          <span>See the Pen <a href="https://codepen.io/HenryZarza/pen/bXdyrg">
+              We code - Speech Synthesis</a> by Henry Zarza (<a href="https://codepen.io/HenryZarza">@HenryZarza</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
         </p>
       </div>
-    </div>
-    <div class="section__content">
-      <p class="section__content-description">
-        En esta charla, Henry nos explicó la continuación de la API de JavaScript de Web speech API; en este caso la
-        de SpeechSynthesis la cual permite realizar una síntesis de la voz a través de una interfaz.
-        En esta <a href="https://slides.com/henryzarza/web-speech-api#/" target="blank" class="link">presentación</a>
-        puedes encontrar más información.
-        Y en este <a href="https://drive.google.com/open?id=1iBzcNhO_5QqJFdCK7EuWrKIJabT-pFNC" target="blank"
-          class="link">link</a> el video
-        de la charla.
-      </p>
-      <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="HenryZarza"
-        data-slug-hash="bXdyrg" data-preview="true"
-        style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-        data-pen-title="We code - Speech Synthesis">
-        <span>See the Pen <a href="https://codepen.io/HenryZarza/pen/bXdyrg">
-            We code - Speech Synthesis</a> by Henry Zarza (<a href="https://codepen.io/HenryZarza">@HenryZarza</a>)
-          on <a href="https://codepen.io">CodePen</a>.</span>
-      </p>
-    </div>
-  </section>
-  <section class="section">
-    <div class="section__item-img" data-displacement="./assets/wave.jpg">
-      <img src="assets/image-8.jpeg" />
-      <img src="assets/image-1.jpeg" />
-      <div class="section__item-content">
-        <h2 class="section__item-title">Array methods</h2>
-        <p class="section__item-subtitle">
-          Explicación, casos de uso y ejemplos de los array method de JavaScript.
-          <span class="section__item-name">Alejandro Bermúdez</span>
+    </section>
+    <section class="section">
+      <div class="section__item-img" data-displacement="./assets/wave.jpg">
+        <img src="assets/image-8.jpeg" />
+        <img src="assets/image-1.jpeg" />
+        <div class="section__item-content">
+          <h2 class="section__item-title">Array methods</h2>
+          <p class="section__item-subtitle">
+            Explicación, casos de uso y ejemplos de los array method de JavaScript.
+            <span class="section__item-name">Alejandro Bermúdez</span>
+          </p>
+        </div>
+      </div>
+      <div class="section__content">
+        <p class="section__content-description">
+          En esta charla, Alejo nos explicó los array methods que tenemos actualmente disponibles en JavaScript, como
+          los podemos usar, algunos ejemplos y casos de uso.
+          En esta <a
+            href="https://docs.google.com/presentation/d/1_GkYGRv_4pX9cAR5qu90mrUxqneEhey2dUbgCYjJmQM/edit?usp=sharing"
+            target="blank" class="link">presentación</a>
+          puedes encontrar más información.
+          Y en este <a href="https://drive.google.com/open?id=1mcN_dZ8vODPzD9rHbn-UfmO-ujCrdK-0" target="blank"
+            class="link">link</a> el video
+          de la charla.
         </p>
       </div>
-    </div>
-    <div class="section__content">
-      <p class="section__content-description">
-        En esta charla, Alejo nos explicó los array methods que tenemos actualmente disponibles en JavaScript, como
-        los podemos usar, algunos ejemplos y casos de uso.
-        En esta <a
-          href="https://docs.google.com/presentation/d/1_GkYGRv_4pX9cAR5qu90mrUxqneEhey2dUbgCYjJmQM/edit?usp=sharing"
-          target="blank" class="link">presentación</a>
-        puedes encontrar más información.
-        Y en este <a href="https://drive.google.com/open?id=1mcN_dZ8vODPzD9rHbn-UfmO-ujCrdK-0" target="blank"
-          class="link">link</a> el video
-        de la charla.
-      </p>
-    </div>
-  </section>
-  <section class="section">
-    <div class="section__item-img" data-displacement="./assets/sparkles.jpg">
-      <img src="assets/image-2.jpeg" />
-      <img src="assets/image-10.jpeg" />
-      <div class="section__item-content">
-        <h2 class="section__item-title">Principios de animaciones</h2>
-        <p class="section__item-subtitle">
-          Razones de porqué aplicamos motion a un proyecto, y qué tener en cuenta a la hora de desarrollarla.
-          <span class="section__item-name">Nicolás Salvatierra</span>
+    </section>
+    <section class="section">
+      <div class="section__item-img" data-displacement="./assets/sparkles.jpg">
+        <img src="assets/image-2.jpeg" />
+        <img src="assets/image-10.jpeg" />
+        <div class="section__item-content">
+          <h2 class="section__item-title">Principios de animaciones</h2>
+          <p class="section__item-subtitle">
+            Razones de porqué aplicamos motion a un proyecto, y qué tener en cuenta a la hora de desarrollarla.
+            <span class="section__item-name">Nicolás Salvatierra</span>
+          </p>
+        </div>
+      </div>
+      <div class="section__content">
+        <p class="section__content-description">
+          Nico nos explicó los principios de las animaciones y que factores debemos de tener en cuenta a la hora de
+          implementarlos en nuestros productos digitales.
+          En esta <a href="https://drive.google.com/open?id=1h2s_bBU7We-kWKRGpxR1uGMXBkGwM-lJEocS8aS1Ors" target="blank"
+            class="link">presentación</a> puedes encontrar más información.
+          Y en este <a href="https://drive.google.com/open?id=13Xe2XoOyUqY_NCTZmeF8VOVrPE65NT2z" target="blank"
+            class="link">link</a> el video
+          de la charla.
+          Además, nos dejó una actividad para desarrollar: al Codepen asociado a está sección debemos de aplicarle los
+          principios de accesibilidad que ella nos explicó, para esto podemos abrir el inspector de elementos y nos
+          mostrará en la consola los erroes que tenemos asociados a la accesibilidad.
+        </p>
+        <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="HenryZarza"
+          data-slug-hash="PoYmRyo" data-preview="true"
+          style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+          data-pen-title="We code - Animation">
+          <span>See the Pen <a href="https://codepen.io/HenryZarza/pen/PoYmRyo">
+              We code - Animation</a> by Henry Zarza (<a href="https://codepen.io/HenryZarza">@HenryZarza</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
         </p>
       </div>
-    </div>
-    <div class="section__content">
-      <p class="section__content-description">
-        Nico nos explicó los principios de las animaciones y que factores debemos de tener en cuenta a la hora de
-        implementarlos en nuestros productos digitales.
-        En esta <a href="https://drive.google.com/open?id=1h2s_bBU7We-kWKRGpxR1uGMXBkGwM-lJEocS8aS1Ors" target="blank"
-          class="link">presentación</a> puedes encontrar más información.
-        Y en este <a href="https://drive.google.com/open?id=13Xe2XoOyUqY_NCTZmeF8VOVrPE65NT2z" target="blank"
-          class="link">link</a> el video
-        de la charla.
-        Además, nos dejó una actividad para desarrollar: al Codepen asociado a está sección debemos de aplicarle los
-        principios de accesibilidad que ella nos explicó, para esto podemos abrir el inspector de elementos y nos
-        mostrará en la consola los erroes que tenemos asociados a la accesibilidad.
-      </p>
-      <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="HenryZarza"
-        data-slug-hash="PoYmRyo" data-preview="true"
-        style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-        data-pen-title="We code - Animation">
-        <span>See the Pen <a href="https://codepen.io/HenryZarza/pen/PoYmRyo">
-            We code - Animation</a> by Henry Zarza (<a href="https://codepen.io/HenryZarza">@HenryZarza</a>)
-          on <a href="https://codepen.io">CodePen</a>.</span>
-      </p>
-    </div>
-  </section>
-  <section class="section">
-    <div class="section__item-img" data-displacement="./assets/wave.jpg">
-      <img src="assets/image-4.jpeg" />
-      <img src="assets/image-10.jpeg" />
-      <div class="section__item-content">
-        <h2 class="section__item-title">Animaciones con SVG</h2>
-        <p class="section__item-subtitle">
-          Explicación y ejemplo de una animación con SVG usando CSS y JavaScript.
-          <span class="section__item-name">Andy Olarte</span>
+    </section>
+    <section class="section">
+      <div class="section__item-img" data-displacement="./assets/wave.jpg">
+        <img src="assets/image-4.jpeg" />
+        <img src="assets/image-10.jpeg" />
+        <div class="section__item-content">
+          <h2 class="section__item-title">Animaciones con SVG</h2>
+          <p class="section__item-subtitle">
+            Explicación y ejemplo de una animación con SVG usando CSS y JavaScript.
+            <span class="section__item-name">Andy Olarte</span>
+          </p>
+        </div>
+      </div>
+      <div class="section__content">
+        <p class="section__content-description">
+          En esta charla, Andy nos explicó sobre como podemos realizar animaciones usando SVGs, ya sea con CSS o con
+          JavaScript.
+          En esta <a
+            href="https://docs.google.com/presentation/d/1uIkoz_hGYEiShqtwlXEkHghbRh8XGmCctoY1ougg4Sk/edit?usp=sharing"
+            target="blank" class="link">presentación</a>
+          puedes encontrar más información.
+          Y en este <a href="https://drive.google.com/open?id=1OTtC5VMEqGnULkimNCp1XojU4hgLFqj2" target="blank"
+            class="link">link</a> el video
+          de la charla.
+        </p>
+        <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result"
+          data-user="andyOlarte514" data-slug-hash="qBWrzgL" data-preview="true"
+          style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+          data-pen-title="Svg Ligth animation">
+          <span>See the Pen <a href="https://codepen.io/andyOlarte514/pen/qBWrzgL">
+              Svg Ligth animation</a> by Andy Francisco Olarte Cardona (<a
+              href="https://codepen.io/andyOlarte514">@andyOlarte514</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
         </p>
       </div>
-    </div>
-    <div class="section__content">
-      <p class="section__content-description">
-        En esta charla, Andy nos explicó sobre como podemos realizar animaciones usando SVGs, ya sea con CSS o con
-        JavaScript.
-        En esta <a
-          href="https://docs.google.com/presentation/d/1uIkoz_hGYEiShqtwlXEkHghbRh8XGmCctoY1ougg4Sk/edit?usp=sharing"
-          target="blank" class="link">presentación</a>
-        puedes encontrar más información.
-        Y en este <a href="https://drive.google.com/open?id=1OTtC5VMEqGnULkimNCp1XojU4hgLFqj2" target="blank"
-          class="link">link</a> el video
-        de la charla.
-      </p>
-      <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result" data-user="andyOlarte514"
-        data-slug-hash="qBWrzgL" data-preview="true"
-        style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-        data-pen-title="Svg Ligth animation">
-        <span>See the Pen <a href="https://codepen.io/andyOlarte514/pen/qBWrzgL">
-            Svg Ligth animation</a> by Andy Francisco Olarte Cardona (<a
-            href="https://codepen.io/andyOlarte514">@andyOlarte514</a>)
-          on <a href="https://codepen.io">CodePen</a>.</span>
-      </p>
-    </div>
-  </section>
-  <section class="section">
-    <div class="section__item-img" data-displacement="./assets/sparkles.jpg">
-      <img src="assets/image-5.jpeg" />
-      <img src="assets/image-1.jpeg" />
-      <div class="section__item-content">
-        <h2 class="section__item-title">Face detection</h2>
-        <p class="section__item-subtitle">
-          Veremos un poco el funcionamiento de la api de face detection integrada en Chrome.
-          <span class="section__item-name">Carlos Hernández</span>
+    </section>
+    <section class="section">
+      <div class="section__item-img" data-displacement="./assets/sparkles.jpg">
+        <img src="assets/image-5.jpeg" />
+        <img src="assets/image-1.jpeg" />
+        <div class="section__item-content">
+          <h2 class="section__item-title">Face detection</h2>
+          <p class="section__item-subtitle">
+            Veremos un poco el funcionamiento de la api de face detection integrada en Chrome.
+            <span class="section__item-name">Carlos Hernández</span>
+          </p>
+        </div>
+      </div>
+      <div class="section__content">
+        <p class="section__content-description">
+          Cherny nos explicó en esta charla acerca de una API que funciona en Chrome (por el momento) para realizar
+          reconocimiento facial, nos estuvo mostrando su funcionamiento y lo que podemos hacer con ella.
+          En esta <a href="https://slides.com/carloshernandez-11/deck#/" target="blank" class="link">presentación</a>
+          puedes encontrar más información.
+          Y en este <a href="https://drive.google.com/open?id=1dkkt1-MCZKlxTgy9WJalhwl-Ci6Hxyl7" target="blank"
+            class="link">link</a> el video
+          de la charla.
         </p>
       </div>
-    </div>
-    <div class="section__content">
-      <p class="section__content-description">
-        Cherny nos explicó en esta charla acerca de una API que funciona en Chrome (por el momento) para realizar
-        reconocimiento facial, nos estuvo mostrando su funcionamiento y lo que podemos hacer con ella.
-        En esta <a href="https://slides.com/carloshernandez-11/deck#/" target="blank" class="link">presentación</a>
-        puedes encontrar más información.
-        Y en este <a href="https://drive.google.com/open?id=1dkkt1-MCZKlxTgy9WJalhwl-Ci6Hxyl7" target="blank"
-          class="link">link</a> el video
-        de la charla.
-      </p>
-    </div>
-  </section>
-  <section class="section">
-    <div class="section__item-img" data-displacement="./assets/wave.jpg">
-      <img src="assets/image-9.jpeg" />
-      <img src="assets/image-3.jpeg" />
-      <div class="section__item-content">
-        <h2 class="section__item-title">Intersection Observer</h2>
-        <p class="section__item-subtitle">
-          ¿Alguna vez tuviste que implementar Lazy Loading para imágenes o Infinite Scrolling en un listado? Usar esta
-          API te puede solucionar muchos problemas.
-          <span class="section__item-name">Enrique Mejía</span>
+    </section>
+    <section class="section">
+      <div class="section__item-img" data-displacement="./assets/wave.jpg">
+        <img src="assets/image-9.jpeg" />
+        <img src="assets/image-3.jpeg" />
+        <div class="section__item-content">
+          <h2 class="section__item-title">Intersection Observer</h2>
+          <p class="section__item-subtitle">
+            ¿Alguna vez tuviste que implementar Lazy Loading para imágenes o Infinite Scrolling en un listado? Usar esta
+            API te puede solucionar muchos problemas.
+            <span class="section__item-name">Enrique Mejía</span>
+          </p>
+        </div>
+      </div>
+      <div class="section__content">
+        <p class="section__content-description">
+          Cerrando con broche de oro está edición, Kike nos estuvo mostrando una API llamada Intersection Observer la
+          cual nos sirve para hacer lazy loading o darle una interacción genial a nuestros elementos cuando se hace
+          scroll.
+          En esta <a href="https://drive.google.com/open?id=1XbHb_TQe6yKSs_1wLmQx11DfMvGUOkdVVdy0I5ss-_0" target="blank"
+            class="link">presentación</a>
+          puedes encontrar más información.
+          Y en este <a href="https://drive.google.com/open?id=1IJHhvNL3yEvNzN2d8Wn6YeDu7j_IqLqE" target="blank"
+            class="link">link</a> el video
+          de la charla.
+        </p>
+        <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="jmtov"
+          data-slug-hash="KORwEy" data-preview="true"
+          style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+          data-pen-title="Intersection Observer">
+          <span>See the Pen <a href="https://codepen.io/jmtov/pen/KORwEy">
+              Intersection Observer</a> by Enrique Mejia (<a href="https://codepen.io/jmtov">@jmtov</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
         </p>
       </div>
-    </div>
-    <div class="section__content">
-      <p class="section__content-description">
-        Cerrando con broche de oro está edición, Kike nos estuvo mostrando una API llamada Intersection Observer la
-        cual nos sirve para hacer lazy loading o darle una interacción genial a nuestros elementos cuando se hace
-        scroll.
-        En esta <a href="https://drive.google.com/open?id=1XbHb_TQe6yKSs_1wLmQx11DfMvGUOkdVVdy0I5ss-_0" target="blank"
-          class="link">presentación</a>
-        puedes encontrar más información.
-        Y en este <a href="https://drive.google.com/open?id=1IJHhvNL3yEvNzN2d8Wn6YeDu7j_IqLqE" target="blank"
-          class="link">link</a> el video
-        de la charla.
-      </p>
-      <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="jmtov"
-        data-slug-hash="KORwEy" data-preview="true"
-        style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-        data-pen-title="Intersection Observer">
-        <span>See the Pen <a href="https://codepen.io/jmtov/pen/KORwEy">
-            Intersection Observer</a> by Enrique Mejia (<a href="https://codepen.io/jmtov">@jmtov</a>)
-          on <a href="https://codepen.io">CodePen</a>.</span>
-      </p>
-    </div>
-  </section>
+    </section>
+  </div>
 
+  <script type="text/javascript" src="js/onepagescroll.min.js"></script>
   <script type="text/javascript" src="js/Three.min.js"></script>
   <script type="text/javascript" src="js/TweenMax.min.js"></script>
   <script type="text/javascript" src="js/HoverEffect.min.js"></script>
