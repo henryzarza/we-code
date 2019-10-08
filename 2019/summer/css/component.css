@@ -146,13 +146,13 @@ html.js,
 .menu-button::before,
 .menu-button::after,
 .menu-button span {
-  background-color: var(--green);
+  background-color: var(--black);
 }
 
 .menu-button:hover::before,
 .menu-button:hover::after,
 .menu-button:hover span {
-  background-color: var(--gray);
+  background-color: var(--green);
 }
 
 .menu-button::before,
@@ -178,7 +178,7 @@ html.js,
 }
 
 .menu-button__description {
-  color: var(--green);
+  color: var(--black);
   font-weight: bold;
   position: absolute;
   right: -40px;
@@ -186,7 +186,7 @@ html.js,
 }
 
 .menu-button:hover .menu-button__description {
-  color: var(--gray);
+  color: var(--green);
 }
 
 .menu-button::before {

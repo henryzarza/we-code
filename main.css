@@ -1,7 +1,12 @@
 :root {
   --dark-gray: #323437;
+  --dark-green: #56AC72;
+  --green: #75DD96;
   --chalk: #C8C8D0;
   --white: #FFF;
+  --folder-height: calc(6rem - 1.7rem);
+  --blue: #15609b;
+  --orange: #FFC971;
 }
 
 *, *:after, *:before {
@@ -54,24 +59,105 @@ body {
 }
 
 .folder-dummy {
-  pointer-events: none;
-}
-
-.folder-dummy::after {
-  background-color: var(--chalk);
-  content: '';
-  display: block;
-  height: 0.6rem;
-  margin: 0 0.35rem;
-  opacity: 0.9;
-  width: calc(5rem * 0.6);
-}
-
-.folder-dummy>svg {
   fill: var(--chalk);
   height: 5rem;
-  opacity: 0.9;
+  opacity: 0.6;
   width: 5rem;
+}
+
+.folder {
+  position: relative;
+  perspective: 800px;
+}
+
+.folder>svg {
+  fill: var(--dark-green);
+  height: 6rem;
+  width: 6rem;
+}
+
+.folder-cover {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 1.2rem;
+  height: var(--folder-height);
+  border-radius: .6rem;
+  background-color: var(--green);
+  transition: transform 330ms cubic-bezier(0.86, 0, 0.07, 1);
+  transform-style: preserve-3d;
+  transform-origin: 50% 100%;
+  z-index: 1;
+}
+
+.folder-cover::before {
+  content: attr(data-year);
+  position: absolute;
+  color: var(--white);
+  font-weight: 600;
+  font-size: 1.5rem;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.folder-sheet {
+  position: absolute;
+  border-radius: .6rem;
+  background-color: var(--white);
+  width: 94%;
+  height: calc(var(--folder-height) * 0.9);
+  left: .15rem;
+  top: 1.45rem;
+  box-shadow: 1px 2px 2px rgba(0, 0, 0, .3), 1px -2px 2px rgba(0, 0, 0, .2);
+}
+
+.logo {
+  width: 10rem;
+  position: absolute;
+  left: 2rem;
+  bottom: 1rem;
+}
+
+.link {
+  transition: transform 330ms cubic-bezier(0.86, 0, 0.07, 1);
+  text-decoration: none;
+  font-size: 1rem;
+  width: 5rem;
+  height: 4rem;
+  color: var(--white);
+  box-shadow: 1px 2px 2px rgba(0, 0, 0, .3), 1px -2px 2px rgba(0, 0, 0, .2);
+  background-color: var(--orange);
+  position: absolute;
+  transform: translate(0, 0);
+  border-radius: 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.link--winter {
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+.link:hover {
+  opacity: 0.8;
+}
+
+.folder:hover>.folder-cover {
+  transform: rotateX(30deg) skewX(15deg);
+}
+
+.folder:hover .link {
+  transform: translate(-3rem, -5rem);
+}
+
+.folder:hover .link--winter {
+  transform: translate(3rem, -5rem);
 }
 
 @media screen and (max-width: 30rem) {
