@@ -46,15 +46,15 @@ code {
 
 .wolox-logo {
   bottom: 1rem;
-  left: 1rem;
+  right: 1rem;
   max-width: 100%;
   position: absolute;
-  width: 10rem;
+  width: 7rem;
 }
 
 .page.page-home {
   align-items: center;
-  background: var(--gray) url(../images/beach.jpeg) no-repeat center/cover;
+  background: #FADF91 url(../images/background.jpeg) no-repeat center/cover;
   display: flex;
   justify-content: center;
 }

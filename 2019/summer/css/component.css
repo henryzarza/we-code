@@ -177,18 +177,6 @@ html.js,
   width: 100%;
 }
 
-.menu-button__description {
-  color: var(--black);
-  font-weight: bold;
-  position: absolute;
-  right: -40px;
-  top: 6px;
-}
-
-.menu-button:hover .menu-button__description {
-  color: var(--green);
-}
-
 .menu-button::before {
   transform: translate3d(0, -10px, 0) scale3d(0.8, 1, 1);
 }
@@ -197,8 +185,7 @@ html.js,
   transform: translate3d(0, 10px, 0) scale3d(0.8, 1, 1);
 }
 
-.menu-button--open span,
-.menu-button--open .menu-button__description {
+.menu-button--open span {
   opacity: 0;
 }
 
@@ -208,6 +195,22 @@ html.js,
 
 .menu-button--open::after {
   transform: rotate3d(0, 0, 1, -45deg);
+}
+
+.back-button {
+  bottom: 0.2rem;
+  color: var(--black);
+  cursor: pointer;
+  font-size: 1.8rem;
+  left: 2rem;
+  position: fixed;
+  text-decoration: none;
+  transition: all 300ms ease;
+}
+
+.back-button:hover {
+  color: var(--green);
+  text-decoration: none;
 }
 
 @media screen and (max-width: 60em) {
@@ -254,8 +257,5 @@ html.js,
   }
   .info {
     font-size: 0.85em;
-  }
-  .menu-button__description {
-    display: none;
   }
 }
