@@ -9,7 +9,9 @@
   --orange: #FFC971;
 }
 
-*, *:after, *:before {
+*,
+*:after,
+*:before {
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
   margin: 0;
@@ -30,6 +32,7 @@ body {
 }
 
 .content {
+  align-items: center;
   background: url(assets/confetti.svg) repeat center center;
   display: flex;
   flex-direction: column;
@@ -43,100 +46,85 @@ body {
 .header__title {
   font-size: 4rem;
   font-weight: 200;
-  margin: 0 auto 1rem;
-  max-width: 100%;
-  width: 1000px;
-}
-
-.grid {
-  display: grid;
-  grid-gap: 6rem;
-  grid-template-columns: repeat(5, 1fr);
-  justify-items: center;
-  margin: 0 auto;
-  max-width: 100%;
-  width: 1000px;
-}
-
-.folder-dummy {
-  fill: var(--chalk);
-  height: 5rem;
-  opacity: 0.6;
-  width: 5rem;
+  margin-bottom: 5rem;
 }
 
 .folder {
-  position: relative;
   perspective: 800px;
+  position: relative;
 }
 
-.folder>svg {
+.folder > svg {
   fill: var(--dark-green);
   height: 6rem;
   width: 6rem;
 }
 
 .folder-cover {
-  width: 100%;
-  position: absolute;
-  left: 0;
-  top: 1.2rem;
-  height: var(--folder-height);
-  border-radius: .6rem;
   background-color: var(--green);
-  transition: transform 330ms cubic-bezier(0.86, 0, 0.07, 1);
-  transform-style: preserve-3d;
+  border-radius: 0.6rem;
+  height: var(--folder-height);
+  left: 0;
+  position: absolute;
+  top: 1.2rem;
   transform-origin: 50% 100%;
+  transform-style: preserve-3d;
+  transition: transform 330ms cubic-bezier(0.86, 0, 0.07, 1);
+  width: 100%;
   z-index: 1;
 }
 
 .folder-cover::before {
-  content: attr(data-year);
-  position: absolute;
-  color: var(--white);
-  font-weight: 600;
-  font-size: 1.5rem;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
   align-items: center;
+  color: var(--white);
+  content: attr(data-year);
+  display: flex;
+  font-size: 1.5rem;
+  font-weight: 600;
+  height: 100%;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
 }
 
 .folder-sheet {
-  position: absolute;
-  border-radius: .6rem;
   background-color: var(--white);
-  width: 94%;
+  border-radius: 0.6rem;
+  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.3), 1px -2px 2px rgba(0, 0, 0, 0.2);
   height: calc(var(--folder-height) * 0.9);
-  left: .15rem;
+  left: 0.15rem;
+  position: absolute;
   top: 1.45rem;
-  box-shadow: 1px 2px 2px rgba(0, 0, 0, .3), 1px -2px 2px rgba(0, 0, 0, .2);
+  width: 94%;
 }
 
 .logo {
-  width: 10rem;
-  position: absolute;
   left: 2rem;
-  bottom: 1rem;
+  position: absolute;
+  text-decoration: none;
+  top: 2rem;
+}
+
+.logo--img {
+  width: 6rem;
 }
 
 .link {
-  transition: transform 330ms cubic-bezier(0.86, 0, 0.07, 1);
-  text-decoration: none;
-  font-size: 1rem;
-  width: 5rem;
-  height: 4rem;
-  color: var(--white);
-  box-shadow: 1px 2px 2px rgba(0, 0, 0, .3), 1px -2px 2px rgba(0, 0, 0, .2);
-  background-color: var(--orange);
-  position: absolute;
-  transform: translate(0, 0);
-  border-radius: 0.6rem;
-  display: flex;
   align-items: center;
-  justify-content: center;
+  background-color: var(--orange);
+  border-radius: 0.6rem;
+  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.3), 1px -2px 2px rgba(0, 0, 0, 0.2);
+  color: var(--white);
+  display: flex;
+  font-size: 1rem;
   font-weight: 600;
+  height: 4rem;
+  justify-content: center;
+  position: absolute;
+  text-decoration: none;
+  transform: translate(0, 0);
+  transition: all 330ms cubic-bezier(0.86, 0, 0.07, 1);
+  width: 5rem;
 }
 
 .link--winter {
@@ -145,10 +133,19 @@ body {
 }
 
 .link:hover {
-  opacity: 0.8;
+  color: var(--dark-gray);
+  opacity: 0.9;
 }
 
-.folder:hover>.folder-cover {
+.date {
+  bottom: 1rem;
+  color: var(--white);
+  font-size: 0.7rem;
+  position: absolute;
+  right: 1rem;
+}
+
+.folder:hover > .folder-cover {
   transform: rotateX(30deg) skewX(15deg);
 }
 
@@ -161,12 +158,6 @@ body {
 }
 
 @media screen and (max-width: 30rem) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
-  .folder-dummy {
-    display: none;
-  }
   .header__title {
     font-size: 2.5rem;
   }
