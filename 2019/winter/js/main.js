@@ -21,7 +21,22 @@ new fullpage('#fullpage', {
   navigationPosition: 'left',
   verticalCentered: false,
   sectionSelector: '.page',
-  navigationTooltips: ['Principal', 'Speech detection', 'thirdSlide', 'fourthSlide']
+  navigationTooltips: [
+    'Principal',
+    'Speech detection',
+    'Stacking context',
+    'Teoría del color',
+    'Countdown only with CSS',
+    'Sombras en CSS',
+    'Complex animations in 5 minutes of code',
+    'Accesibilidad',
+    'Speech synthesis',
+    'Array methods',
+    'Principios de animaciones',
+    'Animaciones con SVG',
+    'Face detection',
+    'Intersection Observer'
+  ]
 });
 
 // Canvas
@@ -33,14 +48,14 @@ const canvas = document.querySelector('.snow'),
   flakes = [];
 
 function Flake(x, y) {
-  const maxWeight = 3,
+  const maxWeight = 2,
     maxSpeed = 1;
   this.x = x;
   this.y = y;
   this.r = randomBetween(0, 1);
   this.a = randomBetween(0, Math.PI);
   this.aStep = 0.01;
-  this.weight = randomBetween(2, maxWeight);
+  this.weight = randomBetween(1, maxWeight);
   this.alpha = (this.weight / maxWeight);
   this.speed = (this.weight / maxWeight) * maxSpeed;
 

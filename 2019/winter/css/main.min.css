@@ -1,7 +1,5 @@
 @import url(variables.css);
-*,
-:after,
-:before {
+*, :after, :before {
   box-sizing: border-box;
   font-family: Montserrat, sans-serif;
   line-height: 1.5;
@@ -27,8 +25,7 @@ body {
  * Copyright (C) 2018 http://alvarotrigo.com/fullPage - A project by Alvaro Trigo
  */
 
-html.fp-enabled,
-.fp-enabled body {
+html.fp-enabled, .fp-enabled body {
   margin: 0;
   overflow: hidden;
   padding: 0;
@@ -49,8 +46,7 @@ html.fp-enabled,
   float: left;
 }
 
-.fp-slide,
-.fp-slidesContainer {
+.fp-slide, .fp-slidesContainer {
   display: block;
   height: 100%;
 }
@@ -65,8 +61,7 @@ html.fp-enabled,
   z-index: 1;
 }
 
-.fp-section.fp-table,
-.fp-slide.fp-table {
+.fp-section.fp-table, .fp-slide.fp-table {
   display: table;
   table-layout: fixed;
   width: 100%;
@@ -174,14 +169,12 @@ html.fp-enabled,
   top: 17px;
 }
 
-#fp-nav ul,
-.fp-slidesNav ul {
+#fp-nav ul, .fp-slidesNav ul {
   margin: 0;
   padding: 0;
 }
 
-#fp-nav ul li,
-.fp-slidesNav ul li {
+#fp-nav ul li, .fp-slidesNav ul li {
   display: block;
   height: 13px;
   margin: 7px;
@@ -193,8 +186,7 @@ html.fp-enabled,
   display: inline-block;
 }
 
-#fp-nav ul li a,
-.fp-slidesNav ul li a {
+#fp-nav ul li a, .fp-slidesNav ul li a {
   cursor: pointer;
   display: block;
   height: 100%;
@@ -204,18 +196,14 @@ html.fp-enabled,
   z-index: 1;
 }
 
-#fp-nav ul li a.active span,
-.fp-slidesNav ul li a.active span,
-#fp-nav ul li:hover a.active span,
-.fp-slidesNav ul li:hover a.active span {
+#fp-nav ul li a.active span, .fp-slidesNav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li:hover a.active span {
   border-radius: 100%;
   height: 12px;
   margin: -6px 0 0 -6px;
   width: 12px;
 }
 
-#fp-nav ul li a span,
-.fp-slidesNav ul li a span {
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
   background: var(--white);
   border: 0;
   border-radius: 50%;
@@ -232,8 +220,7 @@ html.fp-enabled,
   z-index: 1;
 }
 
-#fp-nav ul li:hover a span,
-.fp-slidesNav ul li:hover a span {
+#fp-nav ul li:hover a span, .fp-slidesNav ul li:hover a span {
   height: 10px;
   margin: -5px 0 0 -5px;
   width: 10px;
@@ -254,8 +241,7 @@ html.fp-enabled,
   width: 0;
 }
 
-#fp-nav ul li:hover .fp-tooltip,
-#fp-nav.fp-show-active a.active + .fp-tooltip {
+#fp-nav ul li:hover .fp-tooltip, #fp-nav.fp-show-active a.active+.fp-tooltip {
   opacity: 1;
   -webkit-transition: opacity 0.2s ease-in;
   transition: opacity 0.2s ease-in;
@@ -270,15 +256,11 @@ html.fp-enabled,
   left: 20px;
 }
 
-.fp-auto-height.fp-section,
-.fp-auto-height .fp-slide,
-.fp-auto-height .fp-tableCell {
+.fp-auto-height.fp-section, .fp-auto-height .fp-slide, .fp-auto-height .fp-tableCell {
   height: auto !important;
 }
 
-.fp-responsive .fp-auto-height-responsive.fp-section,
-.fp-responsive .fp-auto-height-responsive .fp-slide,
-.fp-responsive .fp-auto-height-responsive .fp-tableCell {
+.fp-responsive .fp-auto-height-responsive.fp-section, .fp-responsive .fp-auto-height-responsive .fp-slide, .fp-responsive .fp-auto-height-responsive .fp-tableCell {
   height: auto !important;
 }
 
@@ -298,18 +280,17 @@ html.fp-enabled,
 /* Finish fullpage */
 
 .section {
-  background-color: var(--section-bg-color);
   display: flex;
   height: 100vh;
 }
 
-/* .section:nth-child(2n+1) {
-  --section-bg-color: var(--blue-semi-dark)
+.page {
+  background-color: var(--section-bg-color);
 }
 
-.section:nth-child(3n+1) {
-  --section-bg-color: var(--dark-blue)
-} */
+.page:nth-child(even) {
+  --section-bg-color: var(--blue-semi-dark)
+}
 
 .section__description {
   border-radius: 0.4rem;
@@ -355,7 +336,6 @@ html.fp-enabled,
 }
 
 .section__item-img {
-  background-color: var(--white);
   flex: 1;
   position: relative;
 }
@@ -506,8 +486,7 @@ html.fp-enabled,
   .section__item-title {
     font-size: 2rem;
   }
-  .section__content-description,
-  .section__item-subtitle {
+  .section__content-description, .section__item-subtitle {
     font-size: 0.85rem;
   }
   .section--main {
