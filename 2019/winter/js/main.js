@@ -15,15 +15,13 @@ Array.from(imageContainer).forEach(el => {
   });
 });
 
-// One page scroll
-onepagescroll('#container', {
-  pageContainer: 'section',
-  animationType: 'ease-in-out',
-  animationTime: 700,
-  infinite: false,
-  pagination: true,
-  keyboard: true,
-  direction: 'vertical'
+// fullpage scroll
+new fullpage('#fullpage', {
+  navigation: true,
+  navigationPosition: 'left',
+  verticalCentered: false,
+  sectionSelector: '.page',
+  navigationTooltips: ['Principal', 'Speech detection', 'thirdSlide', 'fourthSlide']
 });
 
 // Canvas
