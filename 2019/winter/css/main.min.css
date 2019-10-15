@@ -303,10 +303,6 @@ html.fp-enabled,
   height: 100vh;
 }
 
-.section:nth-child(even) {
-  flex-direction: row-reverse;
-}
-
 /* .section:nth-child(2n+1) {
   --section-bg-color: var(--blue-semi-dark)
 }
@@ -360,7 +356,7 @@ html.fp-enabled,
 
 .section__item-img {
   background-color: var(--white);
-  min-width: 50%;
+  flex: 1;
   position: relative;
 }
 
@@ -372,22 +368,10 @@ html.fp-enabled,
   display: none;
 }
 
-.section__item-content {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  justify-content: space-between;
-  padding: 2rem;
-  position: absolute;
-  width: 100%;
-  z-index: 1;
-}
-
 .section__item-title {
   color: var(--white);
-  font-size: 4rem;
+  font-size: 3rem;
   margin-bottom: 1.5rem;
-  text-shadow: 2px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
 .section__item-subtitle {
@@ -399,22 +383,38 @@ html.fp-enabled,
 
 .section__item-name {
   font-size: 1rem;
-  font-weight: 600;
-  margin-top: 2rem;
+  font-weight: 200;
 }
 
 .section__content {
   display: flex;
+  flex: 2;
   flex-direction: column;
   justify-content: center;
-  min-width: 50%;
   padding: 2rem;
 }
 
 .section__content-description {
   color: var(--white);
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  max-width: 100%;
+  width: 39rem;
+}
+
+.section-item-subtitle {
+  bottom: 0;
+  color: var(--white);
+  font-size: 0.9rem;
+  left: 0;
+  padding: 2rem;
+  position: absolute;
+  z-index: 1;
+}
+
+.codepen-container {
+  max-width: 100%;
+  width: 39rem;
 }
 
 .link {
@@ -494,17 +494,21 @@ html.fp-enabled,
   text-decoration: none;
 }
 
+.section__item-name {
+  color: var(--white);
+  font-size: 1rem;
+}
+
 @media screen and (max-width:55rem) {
-  .section,
-  .section:nth-child(even) {
+  .section {
     flex-direction: column;
   }
   .section__item-title {
-    font-size: 3rem;
+    font-size: 2rem;
   }
   .section__content-description,
   .section__item-subtitle {
-    font-size: 1rem;
+    font-size: 0.85rem;
   }
   .section--main {
     padding: 1rem 1rem 1rem 3rem;
@@ -513,11 +517,12 @@ html.fp-enabled,
     font-size: 0.85rem;
   }
   .section__item-img {
-    min-height: 50vh;
+    min-height: 30vh;
   }
   .section__content {
     display: block;
     overflow-y: auto;
+    padding: 1rem 1rem 1rem 3rem;
   }
   .title {
     font-size: 1.5rem;
