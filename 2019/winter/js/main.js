@@ -29,12 +29,12 @@ const canvas = document.querySelector('.snow'),
   ctx = canvas.getContext('2d'),
   windowW = window.innerWidth,
   windowH = window.innerHeight,
-  numFlakes = 180,
+  numFlakes = 150,
   flakes = [];
 
 function Flake(x, y) {
-  const maxWeight = 4,
-    maxSpeed = 2;
+  const maxWeight = 3,
+    maxSpeed = 1;
   this.x = x;
   this.y = y;
   this.r = randomBetween(0, 1);
